@@ -37,9 +37,9 @@ Categories are disabled by default because I don't use them myself. If you want 
 
 The theme can show your most recently active GitHub repos in the sidebar. To enable, provide a `GITHUB_USER`. Appearance and behaviour can be controlled using the following variables:
 
-* GITHUB_REPO_COUNT
-* GITHUB_SKIP_FORK
-* GITHUB_SHOW_USER_LINK
+* `GITHUB_REPO_COUNT`
+* `GITHUB_SKIP_FORK`
+* `GITHUB_SHOW_USER_LINK`
 
 ### Bootswatch
 
