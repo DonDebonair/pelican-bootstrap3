@@ -53,6 +53,8 @@ You can enable sharing buttons through [AddThis](http://www.addthis.com/) by set
 
 ![](screenshot.png)
 
+![](screenshot-article.png)
+
 ## Live example
 
 [This is my website](http://dandydev.net)
