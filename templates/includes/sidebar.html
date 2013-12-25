@@ -14,6 +14,20 @@
                 {% endfor %}
             {% endif %}
 
+            {% if DISPLAY_RECENT_POSTS_ON_SIDEBAR %}
+                {% if RECENT_POST_COUNT is not defined %}
+                    {% set RECENT_POST_COUNT = 5 %}
+                {% endif %}
+                <li class="list-group-item"><h4><i class="icon-home icon-large"></i>Recent Posts</h4></li>
+                    {% for article in articles[:RECENT_POST_COUNT] %}
+                        <li class="list-group-item">
+                            <a href="{{ SITEURL }}/{{ article.url }}">
+                                {{ article.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+            {% endif %}
+
             {% if DISPLAY_CATEGORIES_ON_SIDEBAR %}
 
                 <li class="list-group-item"><h4><i class="icon-home icon-large"></i>Categories</h4></li>

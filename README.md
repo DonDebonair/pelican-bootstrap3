@@ -2,6 +2,10 @@
 
 This is a Bootstrap 3 theme for Pelican. It's fully responsive. Bootstrap 3 has seen an official, final release now, so I don't expect any breaking changes anymore. I will try to keep it up-to-date.
 
+## NOTE
+
+If you want to adjust this theme to your own liking, I encourage you to fork it. This theme has started to gather more and more attention in the form of stars and forks. I'm not seeing much real participation though :) If you make improvements that are useful to others and can make the theme better in general **please don't hesitate to make a pull request**.
+
 ## Installation
 
 First:
@@ -29,9 +33,24 @@ This theme honors the following standard Pelican settings:
 
 It uses the `tag_cloud` variable for displaying tags in the sidebar. You can control the amount of tags shown with: `TAG_CLOUD_MAX_ITEMS`
 
-Categories are disabled by default because I don't use them myself. If you want to show them in the sidebar, uncomment the relevant section in `includes/sidebar.html`
-
 ## Extras
+
+### Sidebar options
+
+The following things can be displayed on the sidebar:
+
+* **Social links** can be provided through the `SOCIAL` variable. If it's empty, the section will not be shown
+	* In your `pelicanconf.py` provide your social links like this:
+
+```
+SOCIAL = (('twitter', 'http://twitter.com/DaanDebie'),
+          ('linkedin', 'http://www.linkedin.com/in/danieldebie'),
+          ('github', 'http://github.com/DandyDev'),)
+```
+* **Tags** will be shown if `DISPLAY_TAGS_ON_SIDEBAR` is set to _True_
+* **Categories** will be shown if `DISPLAY_CATEGORIES_ON_SIDEBAR` is set to _True_
+* **Recent Posts** will be shown if `DISPLAY_RECENT_POSTS_ON_SIDEBAR` is set to _True_
+	* Use `RECENT_POST_COUNT` to control the amount of recent posts. Defaults to **5**
 
 ### reStructuredText styles
 
@@ -56,6 +75,10 @@ You can enable sharing buttons through [AddThis](http://www.addthis.com/) by set
 ### Facebook Open Graph
 
 In order to make the Facebook like button work better, the template contains Open Graph metatags like `<meta property="og:type" content="article"/>`. You can disable them by setting `USE_OPEN_GRAPH` to `False`. You can use `OPEN_GRAPH_FB_APP_ID` to provide a Facebook _app id_. You can also provide a default image that will be passed to Facebook for the homepage of you site by setting `OPEN_GRAPH_IMAGE` to a relative file path, which will be prefixed by your site's static directory.
+
+### Footer
+
+The footer will display a copyright message using the AUTHOR variable and the year of the latest post.
 
 ## Screenshot
 
