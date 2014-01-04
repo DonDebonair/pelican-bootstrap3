@@ -6,10 +6,10 @@
     <section>
         <ul class="list-group list-group-flush">
             {% if SOCIAL %}
-                <li class="list-group-item"><h4><i class="icon-home icon-large"></i>Social</h4></li>
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i>Social</h4></li>
                 {% for name, link in SOCIAL %}
                     <li class="list-group-item"><a href="{{ link }}"><i
-                            class="icon-{{ name }}-sign icon-large"></i>{{ name }}
+                            class="fa fa-{{ name|lower|replace('+','-plus') }}-square fa-lg"></i>{{ name }}
                     </a></li>
                 {% endfor %}
             {% endif %}
@@ -18,7 +18,7 @@
                 {% if RECENT_POST_COUNT is not defined %}
                     {% set RECENT_POST_COUNT = 5 %}
                 {% endif %}
-                <li class="list-group-item"><h4><i class="icon-home icon-large"></i>Recent Posts</h4></li>
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i>Recent Posts</h4></li>
                     {% for article in articles[:RECENT_POST_COUNT] %}
                         <li class="list-group-item">
                             <a href="{{ SITEURL }}/{{ article.url }}">
@@ -30,11 +30,11 @@
 
             {% if DISPLAY_CATEGORIES_ON_SIDEBAR %}
 
-                <li class="list-group-item"><h4><i class="icon-home icon-large"></i>Categories</h4></li>
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i>Categories</h4></li>
                     {% for cat, null in categories %}
                         <li class="list-group-item">
                             <a href="{{ SITEURL }}/{{ cat.url }}">
-                                <i class="icon-folder-open icon-large"></i>{{ cat }}
+                                <i class="fa fa-folder-open fa-lg"></i>{{ cat }}
                             </a>
                         </li>
                     {% endfor %}
