@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% block title %}{{ SITENAME }} - Tags{% endblock %}
 
+{% block breadcrumbs %}
+    {% if DISPLAY_BREADCRUMBS %}
+    <ol class="breadcrumb">
+        <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
+        <li class="active">Tags</li>
+    </ol>
+    {% endif %}
+{% endblock %}
+
 {% block content %}
     <section id="tags">
         <h1>Tags for {{ SITENAME }}</h1>
