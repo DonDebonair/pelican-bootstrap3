@@ -13,12 +13,12 @@
     <link href="{{ SITEURL }}/{{ FAVICON }}" rel="icon">
     {% endif %}
 
-    <!-- Open Graph tags -->
+    {# Open Graph tags #}
     {% if USE_OPEN_GRAPH is not defined %}
         {% set USE_OPEN_GRAPH = True %}
     {% endif %}
-
     {% if USE_OPEN_GRAPH %}
+    <!-- Open Graph tags -->
         {% if OPEN_GRAPH_FB_APP_ID %}
             <meta property="fb:app_id" content="{{ OPEN_GRAPH_FB_APP_ID }}"/>
         {% endif %}
@@ -39,10 +39,10 @@
             {% if OPEN_GRAPH_IMAGE %}
             <meta property="og:image"
                   content="{{ SITEURL }}/static/{{ OPEN_GRAPH_IMAGE }}"/>
+            {% endif %}
         {% endif %}
-        {% endif %}
-
     {% endif %}
+
     <!-- Bootstrap -->
     {% if BOOTSTRAP_THEME %}
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.{{ BOOTSTRAP_THEME }}.min.css" type="text/css"/>
@@ -50,6 +50,7 @@
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.min.css" type="text/css"/>
     {% endif %}
     <link href="{{ SITEURL }}/theme/css/font-awesome.min.css" rel="stylesheet">
+
     <link href="{{ SITEURL }}/theme/css/pygments.css" rel="stylesheet">
     {% if DOCUTIL_CSS %}
         <link href="{{ SITEURL }}/theme/css/html4css1.css" rel="stylesheet">
