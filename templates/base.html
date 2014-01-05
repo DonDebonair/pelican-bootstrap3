@@ -70,11 +70,8 @@
     {% endif %}
 </head>
 <body>
-{% if BOOTSTRAP_NAVBAR_INVERSE %}
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-{% else %}
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-{% endif %}
+
+<div class="navbar {% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-inverse{% else %}navbar-default{% endif %} navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -114,8 +111,8 @@
         </div>
         <!-- /.navbar-collapse -->
     </div>
-</nav>
-<!-- /.navbar -->
+</div> <!-- /.navbar -->
+
 <div class="container">
     <div class="row">
 	{% if not HIDE_SIDEBAR %}
