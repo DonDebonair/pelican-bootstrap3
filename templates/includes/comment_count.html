@@ -1,1 +1,1 @@
-{% if DISQUS_SITENAME %}<p><small>There are <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" data-disqus-identifier="{{ article.slug }}">comments</a>.</small></p>{% endif %}
+{% if DISQUS_DISPLAY_COUNTS is not defined %}{% set DISQUS_DISPLAY_COUNTS = True %}{% endif %}{% if DISQUS_SITENAME and DISQUS_DISPLAY_COUNTS %}<p><small>There are <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" data-disqus-identifier="{{ article.date|strftime('%Y-%m-') ~ article.slug }}">comments</a>.</small></p>{% endif %}
