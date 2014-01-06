@@ -34,8 +34,8 @@ body {
     color: inherit;
 }
 
-i {
-    margin-right: 10px;
+.icon-label {
+    margin-left: 10px;
 }
 
 a, a:hover {
