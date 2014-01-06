@@ -29,8 +29,7 @@
             {% endif %}
 
             {% if DISPLAY_CATEGORIES_ON_SIDEBAR %}
-
-                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i>Categories</h4></li>
+                <li class="list-group-item"><a href="{{ SITEURL }}/{{ CATEGORIES_URL }}"><h4><i class="fa fa-home fa-lg"></i>Categories</h4></a></li>
                     {% for cat, null in categories %}
                         <li class="list-group-item">
                             <a href="{{ SITEURL }}/{{ cat.url }}">
