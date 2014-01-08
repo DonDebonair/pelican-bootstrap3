@@ -114,13 +114,19 @@
 <!-- /.navbar -->
 <div class="container">
     <div class="row">
+	{% if DISPLAY_SIDEBAR %}
         <div class="col-sm-9">
+	{% else %}
+	<div class="col-lg-12">
+        {% endif %}
             {% block content %}
             {% endblock %}
         </div>
+	{% if DISPLAY_SIDEBAR %}
         <div class="col-sm-3 well well-sm" id="sidebar">
             {% include 'includes/sidebar.html' %}
         </div>
+	{% endif %}
     </div>
 </div>
 {% include 'includes/footer.html' %}
