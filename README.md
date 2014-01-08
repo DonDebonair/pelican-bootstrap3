@@ -53,7 +53,7 @@ SOCIAL = (('twitter', 'http://twitter.com/DaanDebie'),
 * **Recent Posts** will be shown if `DISPLAY_RECENT_POSTS_ON_SIDEBAR` is set to _True_
 	* Use `RECENT_POST_COUNT` to control the amount of recent posts. Defaults to **5**
 
-To remove the sidebar entirely, set `DISPLAY_SIDEBAR` to _False_.
+To remove the sidebar entirely, set `HIDE_SIDEBAR` to _True_.
 
 ### reStructuredText styles
 
