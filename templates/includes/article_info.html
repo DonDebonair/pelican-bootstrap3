@@ -20,5 +20,6 @@
     {% endif %}
 
     {% include 'includes/taglist.html' %}
-    {% include 'includes/translations.html' %}
+    {% import 'includes/translations.html' as translations with context %}
+    {{ translations.translations_for(article) }}
 </footer><!-- /.post-info -->
