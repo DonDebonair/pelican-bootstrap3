@@ -1,9 +1,9 @@
 {% extends "base.html" %}
-{% block title %}{{ SITENAME }} - Tags{% endblock %}
+{% block title %}{{ SITENAME }} - {{ {'en':'Tags', 'zh':'标签'}[DEFAULT_LANG] }}{% endblock %}
 
 {% block content %}
     <section id="tags">
-        <h1>Tags for {{ SITENAME }}</h1>
+        <h1>{{ {'en':'Tags for '+SITENAME, 'zh':SITENAME+' 标签'}[DEFAULT_LANG] }}</h1>
         <ul>
             {%- for tag, articles in tags|sort %}
                 <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
