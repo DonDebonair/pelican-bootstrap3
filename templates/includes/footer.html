@@ -1,7 +1,7 @@
 <footer>
     <div class="container">
         <hr>
-        <p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p>
+        <p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">{{ {'en':'Back to top', 'zh':'返回顶端'}[DEFAULT_LANG] }}</a></p>
 
         {% if articles %}
             {% set copy_date = articles[0].date.strftime('%Y') %}
@@ -9,7 +9,7 @@
             {% set copy_date = '' %}
         {% endif %}
 
-        <p>&copy; {{ copy_date }} {{ AUTHOR }} &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+        <p>&copy; {{ copy_date }} {{ AUTHOR }} &middot; {{ {'en':'Powered by', 'zh':'动力源自'}[DEFAULT_LANG] }} <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a></p>
     </div>

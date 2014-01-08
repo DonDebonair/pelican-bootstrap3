@@ -1,5 +1,5 @@
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="label label-default">{{ {'en':'Date', 'zh':'日期'}[DEFAULT_LANG] }}</span>
     <span class="published">
         <i class="fa fa-calendar"></i><time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
     </span>
@@ -20,5 +20,6 @@
     {% endif %}
 
     {% include 'includes/taglist.html' %}
-    {% include 'includes/translations.html' %}
+    {% import 'includes/translations.html' as translations with context %}
+    {{ translations.translations_for(article) }}
 </footer><!-- /.post-info -->
