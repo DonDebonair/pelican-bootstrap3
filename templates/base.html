@@ -117,8 +117,11 @@
 	{% if not HIDE_SIDEBAR %}
         <div class="col-sm-9">
 	{% else %}
-	<div class="col-lg-12">
+	    <div class="col-lg-12">
     {% endif %}
+            {% block breadcrumbs %}
+            {% endblock %}
+
             {% block content %}
             {% endblock %}
         </div>
