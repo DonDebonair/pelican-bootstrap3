@@ -2,7 +2,7 @@
 {% if article.translations %}
 <span class="label label-default">{{ {'en':'Lang', 'zh':'其它语言'}[DEFAULT_LANG] }}</span>
 {% for translation in article.translations %}
-	<a href="{{ SITEURL }}/{{ translation.url }}">{{ translation.lang }}</a>
+	<a href="{{ SITEURL }}/../{{ translation.lang }}/{{ article.url }}">{{ translation.lang }}</a>
 {% endfor %}
 {% endif %}
 {% endmacro %}
