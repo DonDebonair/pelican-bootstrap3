@@ -29,7 +29,7 @@
             {% endif %}
 
             {% if DISPLAY_CATEGORIES_ON_SIDEBAR %}
-                <li class="list-group-item"><a href="{{ SITEURL }}/{{ CATEGORIES_URL }}"><h4><i class="fa fa-home fa-lg"></i>Categories</h4></a></li>
+                <li class="list-group-item"><a href="{{ SITEURL }}/{{ CATEGORIES_URL | default('categories.html') }}"><h4><i class="fa fa-home fa-lg"></i>Categories</h4></a></li>
                     {% for cat, null in categories %}
                         <li class="list-group-item">
                             <a href="{{ SITEURL }}/{{ cat.url }}">
@@ -40,7 +40,7 @@
             {% endif %}
 
             {% if DISPLAY_TAGS_ON_SIDEBAR %}
-                <li class="list-group-item"><a href="{{ SITEURL }}/{{ TAGS_URL }}"><h4><i class="fa fa-tags fa-lg"></i>Tags</h4></a></li>
+                <li class="list-group-item"><a href="{{ SITEURL }}/{{ TAGS_URL | default('tags.html') }}"><h4><i class="fa fa-tags fa-lg"></i>Tags</h4></a></li>
                     {% for tag in tag_cloud|sort(attribute='1') %}
                         <li class="list-group-item tag-{{ tag.1 }}">
                             <a href="{{ SITEURL }}/{{ tag.0.url }}">
