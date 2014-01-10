@@ -1,10 +1,13 @@
 # pelican-bootstrap3
 
-This is a Bootstrap 3 theme for Pelican. It's fully responsive. Bootstrap 3 has seen an official, final release now, so I don't expect any breaking changes anymore. I will try to keep it up-to-date.
+This is a Bootstrap 3 theme for Pelican. It's fully responsive. Bootstrap 3 has seen an official, final release now, so
+I don't expect any breaking changes anymore. I will try to keep it up-to-date.
 
-## NOTE
+## CONTRIBUTING
 
-If you want to adjust this theme to your own liking, I encourage you to fork it. This theme has started to gather more and more attention in the form of stars and forks. I'm not seeing much real participation though :) If you make improvements that are useful to others and can make the theme better in general **please don't hesitate to make a pull request**.
+If you want to adjust this theme to your own liking, I encourage you to fork it. This theme has started to gather more
+and more attention in the form of stars and forks. If you make improvements that are useful to others and can make the
+theme better in general **please don't hesitate to make a pull request**. For contributing guidlines, [look here](CONTRIBUTING.md)
 
 ## Installation
 
