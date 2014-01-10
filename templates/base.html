@@ -78,7 +78,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="{{ SITEURL }}" class="navbar-brand">{{ SITENAME }}</a>
+            <a href="{{ SITEURL }}" class="navbar-brand">
+                {% if SITEBRAND %}<img src="{{ SITEURL }}/{{ SITEBRAND }}" width="{{ SITEBRAND_SIZE }}"/> {% endif %}
+                {% if not HIDE_SITENAME %}{{ SITENAME }}{% endif %}
+            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
