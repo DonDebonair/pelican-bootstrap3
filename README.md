@@ -7,7 +7,7 @@ I don't expect any breaking changes anymore. I will try to keep it up-to-date.
 
 If you want to adjust this theme to your own liking, I encourage you to fork it. This theme has started to gather more
 and more attention in the form of stars and forks. If you make improvements that are useful to others and can make the
-theme better in general **please don't hesitate to make a pull request**. For contributing guidlines, [look here](CONTRIBUTING.md)
+theme better in general **please don't hesitate to make a pull request**. For contributing guidelines, [look here](CONTRIBUTING.md)
 
 ## Installation
 
@@ -70,7 +70,7 @@ If you're using reStructuredText for writing articles and pages, you can include
 
 * This theme sets identifiers for each article's comment threads. If you are switching from a theme that doesn't (such as the Pelican built-in default) this will result in existing comments getting lost. To prevent this, set DISQUS_NO_ID to _True_.
 * Set DISQUS_ID_PREFIX_SLUG to _True_ if you have configured your article URLs such that the slug alone will likely not be unique. Ignored if DISQUS_NO_ID is _True_.
-* To show Disqus comment counts on the index page, set DISQUS_DISPLAY_COUNTS to _True.
+* To show Disqus comment counts on the index page, set DISQUS_DISPLAY_COUNTS to _True_.
 
 ### GitHub
 
