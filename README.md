@@ -39,6 +39,10 @@ It uses the `tag_cloud` variable for displaying tags in the sidebar. You can con
 
 ## Extras
 
+### Favicon
+
+Set the `FAVICON` option in your pelicanconf.py. For example: `FAVICON = 'images/favicon.png'`
+
 ### Sidebar options
 
 The following things can be displayed on the sidebar:
