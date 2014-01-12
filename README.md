@@ -72,6 +72,18 @@ If you're using reStructuredText for writing articles and pages, you can include
 * Set DISQUS_ID_PREFIX_SLUG to _True_ if you have configured your article URLs such that the slug alone will likely not be unique. Ignored if DISQUS_NO_ID is _True_.
 * To show Disqus comment counts on the index page, set DISQUS_DISPLAY_COUNTS to _True.
 
+### Content license
+
+You can optionally declare a [Creative Commons license](http://creativecommons.org) for the content of your site. It will appear in the site's footer. To enable, use one of the following two ways for configuration.
+
+* To choose the license by name, set `CC_LICENSE` to the common abbreviated name of the license: `"CC-BY"` (require attribution), `"CC-BY-SA"` (require ShareAlike), `"CC-BY-ND"` (NoDerivatives) , `"CC-BY-NC"` (require attribution, no commercial reuse), `"CC-BY-NC-SA"` (require ShareAlike, no commercial reuse), or `"CC-BY-NC-ND"` (NoDerivatives, no commercial reuse).
+* Alternatively, choose the licence by features:
+    * `CC_LICENSE_DERIVATIVES` - `"yes"' if permitted, `"no"` if not permitted, and `"ShareAlike"` if derivatives must be shared under the same terms.
+    * `CC_LICENSE_COMMERCIAL` - `yes` if commercial reuse is permitted, and `no` otherwise. 
+* Optionally, you can include attribution markup in the license mark by setting `CC_ATTR_MARKUP` to _True_.
+
+The license choice mirrors the [Creative Commons License Chooser](http://creativecommons.org/choose/). Source for the macro that renders the mark is at http://github.com/hlapp/cc-tools.
+
 ### GitHub
 
 The theme can show your most recently active GitHub repos in the sidebar. To enable, provide a `GITHUB_USER`. Appearance and behaviour can be controlled using the following variables:
