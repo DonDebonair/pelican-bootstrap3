@@ -108,7 +108,7 @@ In order to make the Facebook like button work better, the template contains Ope
 
 ### Footer
 
-The footer will display a copyright message using the AUTHOR variable and the year of the latest post.
+The footer will display a copyright message using the AUTHOR variable and the year of the latest post. If a content license mark is enabled (see above), that will be shown as well. 
 
 ## Screenshot
 
