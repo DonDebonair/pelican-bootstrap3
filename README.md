@@ -39,6 +39,11 @@ It uses the `tag_cloud` variable for displaying tags in the sidebar. You can con
 
 ## Extras
 
+### Site Brand
+
+Inform yours site brand image in `SITEBRAND`. For example: `SITEBRAND = 'images/my_site_brand.png'`.
+
+It's also possible to hide the site name using the `HIDE_SITENAME` flag and the site brand size with the `SITEBRAND_SIZE` variable.
 ### Favicon
 
 Set the `FAVICON` option in your pelicanconf.py. For example: `FAVICON = 'images/favicon.png'`
