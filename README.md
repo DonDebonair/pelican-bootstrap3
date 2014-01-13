@@ -49,6 +49,10 @@ It's also possible to hide the site name using the `HIDE_SITENAME` flag and the 
 
 Is possible to show breadcrumbs in your blog using the `DISPLAY_BREADCRUMBS` flag. By default the article category isn't shown in the breadcrumbs, if you wish to enable it set the DISPLAY_CATEGORY_IN_BREADCRUMBS` flag to `True`.
 
+### Navbar
+
+If you wish to use the inverse navbar from Bootstrap, set the flag `BOOTSTRAP_NAVBAR_INVERSE = True`
+
 ### Favicon
 
 Set the `FAVICON` option in your pelicanconf.py. For example: `FAVICON = 'images/favicon.png'`
