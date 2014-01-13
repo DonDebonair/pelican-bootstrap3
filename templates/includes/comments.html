@@ -10,6 +10,9 @@
             var disqus_identifier = '{{ article.date|strftime('%Y-%m-') ~ article.slug if DISQUS_ID_PREFIX_SLUG else article.slug }}';
             {% endif %}
             var disqus_url = '{{ SITEURL }}/{{ article.url }}';
+            var disqus_config = function () {
+                this.language = "{{ DEFAULT_LANG }}";
+            };
 
             /* * * DON'T EDIT BELOW THIS LINE * * */
             (function () {
