@@ -53,6 +53,10 @@ Is possible to show breadcrumbs in your blog using the `DISPLAY_BREADCRUMBS` fla
 
 If you wish to use the inverse navbar from Bootstrap, set the flag `BOOTSTRAP_NAVBAR_INVERSE = True`
 
+### Related Posts
+
+Just enable the [related posts plugin](https://github.com/getpelican/pelican-plugins/tree/master/related_posts) and the theme will handle the rest.
+
 ### Favicon
 
 Set the `FAVICON` option in your pelicanconf.py. For example: `FAVICON = 'images/favicon.png'`
