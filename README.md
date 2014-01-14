@@ -39,6 +39,24 @@ It uses the `tag_cloud` variable for displaying tags in the sidebar. You can con
 
 ## Extras
 
+### Site Brand
+
+Inform yours site brand image in `SITEBRAND`. For example: `SITEBRAND = 'images/my_site_brand.png'`.
+
+It's also possible to hide the site name using the `HIDE_SITENAME` flag and the site brand size with the `SITEBRAND_SIZE` variable.
+
+### Breadcrumbs
+
+Is possible to show breadcrumbs in your blog using the `DISPLAY_BREADCRUMBS` flag. By default the article category isn't shown in the breadcrumbs, if you wish to enable it set the DISPLAY_CATEGORY_IN_BREADCRUMBS` flag to `True`.
+
+### Navbar
+
+If you wish to use the inverse navbar from Bootstrap, set the flag `BOOTSTRAP_NAVBAR_INVERSE = True`
+
+### Related Posts
+
+Just enable the [related posts plugin](https://github.com/getpelican/pelican-plugins/tree/master/related_posts) and the theme will handle the rest.
+
 ### Favicon
 
 Set the `FAVICON` option in your pelicanconf.py. For example: `FAVICON = 'images/favicon.png'`
