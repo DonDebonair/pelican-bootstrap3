@@ -1,0 +1,11 @@
+{% for page in pages%}
+{% if page.jumbotron_title %}
+<div class="jumbotron">
+    <div class="container">
+      <h1>{{ page.jumbotron_title }}</h1>
+      <p class="lead">{{ page.jumbotron_text }}</p>
+      <a class="btn btn-primary btn-lg btn-block href="{{ SITEURL }}/{{ page.jumbotron_url }}">{{ page.jumbotron_urlname }}</a>
+    </div>
+</div>
+{% endif %}
+{% endfor %}
