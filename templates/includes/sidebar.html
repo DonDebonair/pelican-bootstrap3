@@ -49,6 +49,17 @@
                         </li>
                 {% endfor %}
             {% endif %}
+
+            {% if LINKS %}
+                <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i>Links</h4></li>
+                {% for name, link in LINKS %}
+                        <li class="list-group-item">
+                            <a href="{{ link }}" target="_blank">
+                                {{ name }}
+                            </a>
+                        </li>
+                {% endfor %}
+            {% endif %}
         </ul>
     </section>
     {% include 'includes/github.html' %}
