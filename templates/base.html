@@ -68,6 +68,9 @@
         <link href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" type="application/atom+xml" rel="alternate"
               title="{{ SITENAME }} RSS Feed"/>
     {% endif %}
+
+    <!-- jQuery should be in the top of the template because of the GitHub script -->
+    <script src="http://code.jquery.com/jquery.js"></script>
 </head>
 <body>
 
@@ -134,9 +137,6 @@
     </div>
 </div>
 {% include 'includes/footer.html' %}
-
-<!-- JavaScript plugins (requires jQuery) -->
-<script src="http://code.jquery.com/jquery.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
