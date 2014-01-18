@@ -57,6 +57,27 @@ a, a:hover {
     height: auto;
 }
 
+.entry-content figcaption {
+    font-size: small;
+    margin-bottom: 2px;
+}
+
+.floatright {
+    float: right;
+}
+
+.floatleft {
+    float: left;
+}
+
+figure.floatright {
+    margin-left: 4px;
+}
+
+figure.floatleft {
+    margin-right: 4px;
+}
+
 .highlight pre {
     background-color: #202020;
     color: #777;
