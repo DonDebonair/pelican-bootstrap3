@@ -84,3 +84,18 @@ a, a:hover {
     font-size: 0.9em;
     margin-right: 10px;
 }
+
+/*CUSTOMIZATIONS - CADU*/
+
+footer.post-info{
+    font-size: 10px;
+}
+
+header.page-header{
+    padding-bottom:9px;
+    margin: 10px 0 5px;
+}
+
+div.panel-body-article-info{
+    padding:2px;
+}
