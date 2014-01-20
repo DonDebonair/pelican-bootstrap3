@@ -6,10 +6,10 @@
     <section>
         <ul class="list-group list-group-flush">
             {% if SOCIAL %}
-                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i>Social</h4></li>
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4></li>
                 {% for name, link in SOCIAL %}
                     <li class="list-group-item"><a href="{{ link }}"><i
-                            class="fa fa-{{ name|lower|replace('+','-plus') }}-square fa-lg"></i>{{ name }}
+                            class="fa fa-{{ name|lower|replace('+','-plus') }}-square fa-lg"></i> {{ name }}
                     </a></li>
                 {% endfor %}
             {% endif %}
@@ -18,7 +18,7 @@
                 {% if RECENT_POST_COUNT is not defined %}
                     {% set RECENT_POST_COUNT = 5 %}
                 {% endif %}
-                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i>Recent Posts</h4></li>
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4></li>
                     {% for article in articles[:RECENT_POST_COUNT] %}
                         <li class="list-group-item">
                             <a href="{{ SITEURL }}/{{ article.url }}">
@@ -29,18 +29,19 @@
             {% endif %}
 
             {% if DISPLAY_CATEGORIES_ON_SIDEBAR %}
-                <li class="list-group-item"><a href="{{ SITEURL }}/{{ CATEGORIES_URL }}"><h4><i class="fa fa-home fa-lg"></i>Categories</h4></a></li>
+                <li class="list-group-item"><a href="{{ SITEURL }}/{{ CATEGORIES_URL }}"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a></li>
+
                     {% for cat, null in categories %}
                         <li class="list-group-item">
                             <a href="{{ SITEURL }}/{{ cat.url }}">
-                                <i class="fa fa-folder-open fa-lg"></i>{{ cat }}
+                                <i class="fa fa-folder-open fa-lg"></i> {{ cat }}
                             </a>
                         </li>
                     {% endfor %}
             {% endif %}
 
             {% if DISPLAY_TAGS_ON_SIDEBAR %}
-                <li class="list-group-item"><a href="{{ SITEURL }}/{{ TAGS_URL }}"><h4><i class="fa fa-tags fa-lg"></i>Tags</h4></a></li>
+                <li class="list-group-item"><a href="{{ SITEURL }}/{{ TAGS_URL }}"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a></li>
                     {% for tag in tag_cloud|sort(attribute='1') %}
                         <li class="list-group-item tag-{{ tag.1 }}">
                             <a href="{{ SITEURL }}/{{ tag.0.url }}">
