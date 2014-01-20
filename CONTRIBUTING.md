@@ -12,3 +12,4 @@ upon PR merge).
 - If you introduce net theme variables, new behaviour or changes from the default Pelican behaviour, make sure you make
 mention of it in the [README](README.md)
 - Somewhat related, make sure changes do not break backwards compatibility, especially with regards to settings.
+- Also related, please only contribute changes that are sensible for the majority of use cases. You can use `CUSTOM_CSS` for those details that don't fit your particular use case.
