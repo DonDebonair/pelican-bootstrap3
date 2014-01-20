@@ -59,6 +59,9 @@
         <link href="{{ SITEURL }}/theme/css/typogrify.css" rel="stylesheet">
     {% endif %}
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css" type="text/css"/>
+    {% if CUSTOM_CSS %}
+        <link href="{{ SITEURL }}/{{ CUSTOM_CSS }}" rel="stylesheet">
+    {% endif %}
 
     {% if FEED_ALL_ATOM %}
         <link href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate"

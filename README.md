@@ -40,6 +40,20 @@ It uses the `tag_cloud` variable for displaying tags in the sidebar. You can con
 
 ## Extras
 
+### Custom CSS
+
+If you want to add custom css to the theme, without having to clone and maintain your own version of the theme, you can use the `CUSTOM_CSS` setting. You need to tell Pelican to copy the relevant file to the output directory as well:
+
+```
+# Tell Pelican to add 'extra/custom.css' to the output dir
+STATIC_PATHS = ['images', 'extra/custom.css']
+
+# Tell Pelican to change the path to 'static/custom.css' in the output dir
+EXTRA_PATH_METADATA = {
+    'extra/custom.css': {'path': 'static/custom.css'}
+}
+```
+
 ### Site Brand
 
 You can provide a logo for your site using `SITELOGO`. For example: `SITELOGO = 'images/my_site_logo.png'`. You can then define the size of the logo using `SITELOGO_SIZE`. The `width` of the `<img>` element will be set accordingly.
