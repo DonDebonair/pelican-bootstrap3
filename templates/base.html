@@ -51,7 +51,7 @@
     {% endif %}
     <link href="{{ SITEURL }}/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="{{ SITEURL }}/theme/css/pygments.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/theme/css/pygments/{{ PYGMENTS_STYLE|default('native') }}.css" rel="stylesheet">
     {% if DOCUTIL_CSS %}
         <link href="{{ SITEURL }}/theme/css/html4css1.css" rel="stylesheet">
     {% endif %}

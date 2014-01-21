@@ -57,9 +57,29 @@ a, a:hover {
     height: auto;
 }
 
-.highlight pre {
-    background-color: #202020;
-    color: #777;
+.highlighttable pre {
+    /* Removes bootstrap default margin-bottom */
+    margin-bottom: 0px;
+}
+
+.highlighttable {
+    /* Adds them margin-bottom to highlightable instead of <pre> */
+    margin-bottom: 11px;
+    width: 100%;
+}
+
+.linenodiv pre {
+    /* Separator for lines and code */
+    border-right: 1px solid #444444 !important;
+}
+
+.highlight pre, .linenodiv pre{
+    /* Let Pygments .css style the elements in <pre> */
+    background-color: transparent;
+    color: inherit;
+    /* Removes borders */
+    border: none;
+    border-radius: 0px;
 }
 
 #categories ul, #tags ul {
