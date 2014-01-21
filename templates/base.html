@@ -108,7 +108,7 @@
                 {% if DISPLAY_PAGES_ON_MENU %}
                     {% for p in PAGES %}
                          <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">
-                             {{ p.title }}
+                             {{ p.menulabel|default(p.title) }}
                           </a></li>
                       {% endfor %}
                 {% endif %}
