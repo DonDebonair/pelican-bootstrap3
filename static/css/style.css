@@ -50,6 +50,12 @@ body {
     margin-left: 10px;
 }
 
+/* Example for how to control spacing between icon and label in specific
+   lists in the sidebar. To change, override in your CUSTOM_CSS           */
+#sidebar #social i {
+    margin-right: 3px;
+}
+
 a, a:hover {
     color: inherit;
 }
