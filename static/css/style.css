@@ -57,24 +57,47 @@ a, a:hover {
     height: auto;
 }
 
-.entry-content figcaption {
+.entry-content figcaption, .legend {
     font-size: small;
     margin-bottom: 2px;
 }
 
-.floatright {
+.caption {
+    text-align: center;
+    font-weight: bold;
+    font-size: 120%;
+    margin-bottom: 11px;
+}
+
+.floatright, .align-right {
     float: right;
 }
 
-.floatleft {
+.floatleft, .align-left {
     float: left;
 }
 
-figure.floatright {
+.floatcenter, .align-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.figure img {
+    margin-bottom: 11px;
+}
+.figure, figure {
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 4px;
+}
+
+figure.floatright, .figure.align-right {
     margin-left: 4px;
 }
 
-figure.floatleft {
+figure.floatleft, .figure.align-left {
     margin-right: 4px;
 }
 
