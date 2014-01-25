@@ -82,25 +82,35 @@ a, a:hover {
     height: auto;
 }
 
-.entry-content figcaption {
+.entry-content figcaption, .caption {
     font-size: small;
     margin-bottom: 2px;
 }
 
-.floatright {
+.floatright, .align-right {
     float: right;
 }
 
-.floatleft {
+.floatleft, .align-left {
     float: left;
 }
 
-figure.floatright {
+.floatcenter, .align-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figure.floatright, .align-right {
     margin-left: 4px;
 }
 
-figure.floatleft {
+figure.floatleft, .align-left {
     margin-right: 4px;
+}
+
+figure.floatcenter, .align-center {
+    margin-bottom: 11px;
 }
 
 .highlight pre {
