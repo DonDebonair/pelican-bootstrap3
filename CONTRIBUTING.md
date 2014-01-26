@@ -12,5 +12,5 @@ _False_, so users will not get any surprises when upgrading.
 - If you introduce new theme variables, new behaviour or changes from the default Pelican behaviour, make sure you make
 mention of it in the [README](README.md)
 - Make sure changes do not break backwards compatibility, especially with regards to settings.
-- Only changes that stand to benefit a majority of users or use cases are suitable for contributing back to the main repository. For tweaks that are likely specific to your site or likings, try to use `CUSTOM_CSS`.
+- Only changes that stand to benefit a majority of users or use cases are suitable for contributing back to the main repository. For tweaks that are likely specific to your site or likings, try using `CUSTOM_CSS`.
     - If doing so would require a CSS selector that isn't supported by the theme, create a patch that adds the necessary CSS selector, not the CSS tweak.
