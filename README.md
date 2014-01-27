@@ -40,6 +40,31 @@ It uses the `tag_cloud` variable for displaying tags in the sidebar. You can con
 
 ## Extras
 
+### Pygments
+
+You can choose the code highlight style based in the pygments styles editing the `PYGMETNS_STYLE` variable, by default is used the `native` style. There following styles are avaiable:
+
+- autumn
+- borland
+- bw
+- colorful
+- default
+- emacs
+- friendly
+- fruity
+- manni
+- monokai
+- murphy
+- native
+- pastie
+- perldoc
+- solarizeddark
+- solarizedlight
+- tango
+- trac
+- vim
+- vs
+
 ### Site Brand
 
 You can provide a logo for your site using `SITELOGO`. For example: `SITELOGO = 'images/my_site_logo.png'`. You can then define the size of the logo using `SITELOGO_SIZE`. The `width` of the `<img>` element will be set accordingly.
