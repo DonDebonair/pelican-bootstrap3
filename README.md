@@ -62,7 +62,7 @@ EXTRA_PATH_METADATA = {
 
 ### Pygments
 
-You can choose the code highlight style based in the pygments styles editing the `PYGMETNS_STYLE` variable, by default is used the `native` style. There following styles are avaiable:
+You can choose the syntax highlighting style by using the `PYGMENTS_STYLE` variable to specify one of the built-in Pygments styles. By default the `native` style is used. The following styles are avaiable:
 
 - autumn
 - borland
@@ -84,6 +84,8 @@ You can choose the code highlight style based in the pygments styles editing the
 - trac
 - vim
 - vs
+
+For a demo of the different Pygment styles, have a look [here](http://pygments.org/demo/218030/)
 
 ### Site Brand
 
