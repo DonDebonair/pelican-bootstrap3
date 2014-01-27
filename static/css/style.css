@@ -113,9 +113,18 @@ figure.floatcenter, .align-center {
     margin-bottom: 11px;
 }
 
-.highlight pre {
-    background-color: #202020;
-    color: #777;
+.highlighttable pre {
+    /* Removes bootstrap default margin-bottom */
+    margin-bottom: 0px;
+}
+
+.highlighttable {
+    /* Adds them margin-bottom to highlightable instead of <pre> */
+    margin-bottom: 11px;
+}
+
+.highlighttable .code {
+    width: 100%;
 }
 
 #categories ul, #tags ul {
