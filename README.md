@@ -42,7 +42,13 @@ It uses the `tag_cloud` variable for displaying tags in the sidebar. You can con
 
 ### Custom CSS
 
-If you want to add custom css to the theme, without having to clone and maintain your own version of the theme, you can use the `CUSTOM_CSS` setting. You need to tell Pelican to copy the relevant file to the output directory as well:
+If you want to add custom css to the theme, without having to clone and maintain your own version of the theme, you can use the `CUSTOM_CSS` variable. The value is the location where you tell Pelican to put the file (see below):
+
+```
+CUSTOM_CSS = 'static/custom.css'
+```
+
+To tell Pelican to copy the relevant file to the desired destination, add the path to `STATIC_PATHS` and the destination to `EXTRA_PATH_METADATA`, like so:
 
 ```
 # Tell Pelican to add 'extra/custom.css' to the output dir
