@@ -65,13 +65,10 @@ a, a:hover {
 .highlighttable {
     /* Adds them margin-bottom to highlightable instead of <pre> */
     margin-bottom: 11px;
-    width: 100%;
 }
 
-.highlight pre, .linenodiv pre{
-    /* Let Pygments .css style the elements in <pre> */
-    background-color: transparent;
-    color: inherit;
+.highlighttable .code {
+    width: 100%;
 }
 
 #categories ul, #tags ul {
