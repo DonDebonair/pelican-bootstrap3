@@ -62,7 +62,7 @@ EXTRA_PATH_METADATA = {
 
 ### Pygments
 
-You can choose the code highlight style based in the pygments styles editing the `PYGMETNS_STYLE` variable, by default is used the `native` style. There following styles are avaiable:
+You can choose the code highlight style based in the pygments styles editing the `PYGMENTS_STYLE` variable, by default is used the `native` style. There following styles are avaiable:
 
 - autumn
 - borland
