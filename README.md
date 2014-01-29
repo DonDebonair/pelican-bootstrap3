@@ -122,6 +122,7 @@ SOCIAL = (('twitter', 'http://twitter.com/DaanDebie'),
           ('github', 'http://github.com/DandyDev'),)
 ```
 * **Tags** will be shown if `DISPLAY_TAGS_ON_SIDEBAR` is set to _True_
+* **Inline Tags (tagcloud)** will be shown if `DISPLAY_TAGS_INLINE` is set to _True_
 * **Categories** will be shown if `DISPLAY_CATEGORIES_ON_SIDEBAR` is set to _True_
 * **Recent Posts** will be shown if `DISPLAY_RECENT_POSTS_ON_SIDEBAR` is set to _True_
 	* Use `RECENT_POST_COUNT` to control the amount of recent posts. Defaults to **5**
