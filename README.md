@@ -145,7 +145,7 @@ You can optionally declare a [Creative Commons license](http://creativecommons.o
 * To choose the license by name, set `CC_LICENSE` to the common abbreviated name of the license: `"CC-BY"` (require attribution), `"CC-BY-SA"` (require ShareAlike), `"CC-BY-ND"` (NoDerivatives) , `"CC-BY-NC"` (require attribution, no commercial reuse), `"CC-BY-NC-SA"` (require ShareAlike, no commercial reuse), or `"CC-BY-NC-ND"` (NoDerivatives, no commercial reuse).
 * Alternatively, choose the licence by features:
     * `CC_LICENSE_DERIVATIVES` - `"yes"` if permitted, `"no"` if not permitted, and `"ShareAlike"` if derivatives must be shared under the same terms.
-    * `CC_LICENSE_COMMERCIAL` - `"yes"` if commercial reuse is permitted, and `"no"` otherwise. 
+    * `CC_LICENSE_COMMERCIAL` - `"yes"` if commercial reuse is permitted, and `"no"` otherwise.
 * Optionally, you can include attribution markup in the license mark by setting `CC_ATTR_MARKUP` to _True_.
 
 The license choice mirrors the [Creative Commons License Chooser](http://creativecommons.org/choose/). Source for the macro that renders the mark is at http://github.com/hlapp/cc-tools.
@@ -174,7 +174,16 @@ In order to make the Facebook like button work better, the template contains Ope
 
 ### Footer
 
-The footer will display a copyright message using the AUTHOR variable and the year of the latest post. If a content license mark is enabled (see above), that will be shown as well. 
+The footer will display a copyright message using the AUTHOR variable and the year of the latest post. If a content license mark is enabled (see above), that will be shown as well.
+
+### The Day We Fight Back
+
+Enable displaying [The Day We Fight Back](https://thedaywefightback.org/) banner on 2014-02-11.
+
+* `THE_DAY_WE_FIGHT_BACK` - Set to _True_ to enable the banner.
+* `THE_DAY_WE_FIGHT_BACK_GREETING` - Sets the salutation shown in the banner (default is "Dear Internet").
+* `THE_DAY_WE_FIGHT_BACK_DISABLE_DATE` - If _True_, the banner shows even if the date is not yet 02/11/2014. Use for testing.
+* `THE_DAY_WE_FIGHT_BACK_CALL_ONLY` - If _True_, the banner emphasizes calling congress over emailing.
 
 ## Screenshot
 
