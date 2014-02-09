@@ -109,6 +109,15 @@ This theme has support for the [Related Posts plugin](https://github.com/getpeli
 
 Set the `FAVICON` option in your `pelicanconf.py`. For example: `FAVICON = 'images/favicon.png'`
 
+### About Me options
+
+The following things can be displayed on the about me:
+
+* Your avatar will be the location that `AVATAR` is set to (e.g. 'images/profile.png')
+* Your aboutme paragraph will be whatever the `ABOUT_ME` variable is set to (raw html is allowed)
+
+To remove the aboutme entirely, set `SHOW_ABOUTME` to _False_ (default _False_)
+
 ### Sidebar options
 
 The following things can be displayed on the sidebar:
