@@ -1,0 +1,28 @@
+{% if THE_DAY_WE_FIGHT_BACK %}
+	{% if THE_DAY_WE_FIGHT_BACK_GREETING is not defined %}
+		{% set THE_DAY_WE_FIGHT_BACK_GREETING = "Dear Internet" %}
+	{% endif %}
+
+	<!--[if !(lt IE 8)]><!-->
+	<script type="text/javascript">
+		var tdwfb_config = {
+			greeting: '{{ THE_DAY_WE_FIGHT_BACK_GREETING }}', // Sets the salutation shown in the banner.
+			{% if THE_DAY_WE_FIGHT_BACK_DISABLE_DATE %}
+			disableDate: true, // If true, the banner shows even if the date is not yet 02/11/2014. Use for testing.
+			{% else %}
+			disableDate: false, // If true, the banner shows even if the date is not yet 02/11/2014. Use for testing.
+			{% endif %}
+			{% if THE_DAY_WE_FIGHT_BACK_CALL_ONLY %}
+			callOnly: true // If true, the banner emphasizes calling congress over emailing.
+			{% else %}
+			callOnly: false // If true, the banner emphasizes calling congress over emailing.
+			{% endif %}
+		};
+		(function(){
+			var e = document.createElement('script'); e.type='text/javascript'; e.async = true;
+			e.src = document.location.protocol + '//d1agz031tafz8n.cloudfront.net/thedaywefightback.js/widget.min.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s);
+		})();
+	</script>
+<!--<![endif]-->
+{% endif %}
