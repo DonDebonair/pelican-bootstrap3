@@ -113,14 +113,12 @@ Set the `FAVICON` option in your `pelicanconf.py`. For example: `FAVICON = 'imag
 
 * If `DISPLAY_ARTICLE_INFO_ON_INDEX` is set to _True_, article info (date, tags) will be show under the title for each article, otherwise only title and summary will be shown (default). 
 
-### About Me options
+### About Me
 
-The following things can be displayed on the about me:
+You can show a short blurb of text about yourself and a picture. The following two settings are used for this:
 
-* Your avatar will be the location that `AVATAR` is set to (e.g. 'images/profile.png')
-* Your aboutme paragraph will be whatever the `ABOUT_ME` variable is set to (raw html is allowed)
-
-To remove the aboutme entirely, set `SHOW_ABOUTME` to _False_ (default _False_)
+* Your 'About Me' paragraph will be whatever the `ABOUT_ME` variable is set to (raw html is allowed)
+* Your avatar can be set by pointing the `AVATAR` variable to the relevant picture (e.g. 'images/profile.png')
 
 ### Sidebar options
 
