@@ -109,9 +109,9 @@ This theme has support for the [Related Posts plugin](https://github.com/getpeli
 
 Set the `FAVICON` option in your `pelicanconf.py`. For example: `FAVICON = 'images/favicon.png'`
 
-### index page options
+### Index page
 
-* article info (date, tags) will be show with the title for each article, if `DISPLAY_ARTICLE_INFO_ON_INDEX` is set to _True_
+* If `DISPLAY_ARTICLE_INFO_ON_INDEX` is set to _True_, article info (date, tags) will be show under the title for each article, otherwise only title and summary will be shown (default). 
 
 ### Sidebar options
 
