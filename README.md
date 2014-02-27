@@ -84,6 +84,7 @@ You can choose the syntax highlighting style by using the `PYGMENTS_STYLE` varia
 - trac
 - vim
 - vs
+- zenburn
 
 For a demo of the different Pygment styles, have a look [here](http://pygments.org/demo/218030/)
 
