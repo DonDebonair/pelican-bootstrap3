@@ -188,6 +188,9 @@ I included all the lovely Bootstrap 3 themes from [Bootswatch](http://bootswatch
 
 You can enable sharing buttons through [AddThis](http://www.addthis.com/) by setting `ADDTHIS_PROFILE` to your AddThis profile-id. This will display a **Tweet**, **Facebook Like** and **Google +1** button under each post.
 
+* AddThis automatically adds a short hashtag to the end of your URLs. This lets you reveal how often visitors copy your URL from their address bar to share. Example of URL: `http://domain.com/page.html#UF0983`. This function can be disabled by setting `ADDTHIS_DATA_TRACK_ADDRESSBAR` to _False_.
+* All social buttons are enabled by default. You can disable certain button by setting following properties to _False_: `ADDTHIS_FACEBOOK_LIKE`, `ADDTHIS_TWEET`, `ADDTHIS_GOOGLE_PLUSONE`.
+
 ### Facebook Open Graph
 
 In order to make the Facebook like button work better, the template contains Open Graph metatags like `<meta property="og:type" content="article"/>`. You can disable them by setting `USE_OPEN_GRAPH` to _False_. You can use `OPEN_GRAPH_FB_APP_ID` to provide a Facebook _app id_. You can also provide a default image that will be passed to Facebook for the homepage of you site by setting `OPEN_GRAPH_IMAGE` to a relative file path, which will be prefixed by your site's static directory.
