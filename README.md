@@ -200,6 +200,12 @@ In order to make the Facebook like button work better, the template contains Ope
 
 The footer will display a copyright message using the AUTHOR variable and the year of the latest post. If a content license mark is enabled (see above), that will be shown as well. 
 
+### MathJax
+
+If you want to use MathJax to generate LaTeX formulas, you need to set `MATHJAX_URL` to an URL where a mathjax installation is provided. You can use the [official](http://docs.mathjax.org/en/latest/start.html#mathjax-cdn) one or set one up your own. 
+
+You can also set `MATHJAX_INLINE` to _True_ if you want Inline LaTeX with single **$**.
+
 ## Screenshot
 
 ![](screenshot.png)

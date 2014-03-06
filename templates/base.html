@@ -12,11 +12,12 @@
     {% if FAVICON %}
     <link href="{{ SITEURL }}/{{ FAVICON }}" rel="icon">
     {% endif %}
-
+    
     {# Open Graph tags #}
     {% if USE_OPEN_GRAPH is not defined %}
         {% set USE_OPEN_GRAPH = True %}
     {% endif %}
+    
     {% if USE_OPEN_GRAPH %}
     <!-- Open Graph tags -->
         {% if OPEN_GRAPH_FB_APP_ID %}
@@ -50,6 +51,8 @@
             {% endif %}
         {% endif %}
     {% endif %}
+    
+    {% include 'includes/mathjax.html' %}
 
     <!-- Bootstrap -->
     {% if BOOTSTRAP_THEME %}
