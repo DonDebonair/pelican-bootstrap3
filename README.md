@@ -32,7 +32,8 @@ This theme honors the following standard Pelican settings:
 	* `MENUITEMS`
 	* `LINKS` (Blogroll will be put in the sidebar instead of the head)
 * Analytics & Comments
-	* `GOOGLE_ANALYTICS`
+	* `GOOGLE_ANALYTICS` (classic tracking code)
+	* `GOOGLE_ANALYTICS_UNIVERSAL` and `GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY` (Universal tracking code)
 	* `DISQUS_SITENAME`
 	* `PIWIK_URL`, `PIWIK_SSL_URL` and `PIWIK_SITE_ID`
 
