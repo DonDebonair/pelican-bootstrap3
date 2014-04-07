@@ -1,9 +1,11 @@
 {% if article.tags %}
 <span class="label label-default">Tags</span>
+<span class="article-info">
 {% for tag in article.tags %}
 	<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
     {% if not loop.last %}
         /
     {% endif %}
 {% endfor %}
+</span>
 {% endif %}
