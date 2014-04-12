@@ -161,3 +161,8 @@ figure.floatcenter, .align-center {
 .article-info {
     vertical-align:text-top;
 }
+
+.fa-lg {
+    vertical-align:baseline;
+    font-size:1em;
+}
