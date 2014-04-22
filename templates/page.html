@@ -3,10 +3,10 @@
 
 {% block breadcrumbs %}
     {% if DISPLAY_BREADCRUMBS %}
-    <ol class="breadcrumb">
-        <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
-        <li class="active">{{ page.title }}</li>
-    </ol>
+        <ol class="breadcrumb">
+            <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
+            <li class="active">{{ page.title }}</li>
+        </ol>
     {% endif %}
 {% endblock %}
 
@@ -23,7 +23,7 @@
         <div class="entry-content">
             {{ page.content }}
             {% if page.comments == 'enabled' %}
-            {% include 'includes/comments.html' %}
+                {% include 'includes/comments.html' %}
             {% endif %}
         </div>
     </section>
