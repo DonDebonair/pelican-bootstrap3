@@ -22,6 +22,9 @@
         {% endif %}
         <div class="entry-content">
             {{ page.content }}
+            {% if page.comments == 'enabled' %}
+            {% include 'includes/comments.html' %}
+            {% endif %}
         </div>
     </section>
 {% endblock %}
