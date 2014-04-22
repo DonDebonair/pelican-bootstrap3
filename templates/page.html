@@ -22,7 +22,7 @@
         {% endif %}
         <div class="entry-content">
             {{ page.content }}
-            {% if DISQUS_PAGE_COMMENTS %}
+            {% if page.comments == 'enabled' %}
             {% include 'includes/comments.html' %}
             {% endif %}
         </div>
