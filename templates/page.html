@@ -22,6 +22,9 @@
         {% endif %}
         <div class="entry-content">
             {{ page.content }}
+            {% if DISQUS_PAGE_COMMENTS %}
+            {% include 'includes/comments.html' %}
+            {% endif %}
         </div>
     </section>
 {% endblock %}
