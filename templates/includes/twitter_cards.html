@@ -1,0 +1,31 @@
+{% if TWITTER_CARD and TWITTER_USERNAME and TWITTER_ID %}
+    {% if article %}
+    <meta property="twitter:account_id" content="{{ TWITTER_ID }}" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ article.title|striptags }}">
+    <meta name="twitter:description" content="{{ article.summary|striptags }}">
+    <meta name="twitter:site" content="@{{ TWITTER_USERNAME }}">
+    <meta name="twitter:creator" content="@{{ TWITTER_USERNAME }}">
+    <meta name="twitter:domain" content="{{ SITEURL }}">
+    {% if article.social_image %}
+    <meta property="twitter:image"
+          content="{{ SITEURL }}/images/{{ article.social_image }}"/>
+    {% endif %}
+    {% elif page %}       
+    <meta property="twitter:account_id" content="{{ TWITTER_ID }}" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ page.title|striptags }}">
+    <meta name="twitter:domain" content="{{ SITEURL }}">
+    <meta name="twitter:site" content="@{{ TWITTER_USERNAME }}">
+    <meta name="twitter:creator" content="@{{ TWITTER_USERNAME }}">
+    <meta name="twitter:description" content="{{ page.summary|striptags }}">
+    {% else %}
+    <meta property="twitter:account_id" content="{{ TWITTER_ID }}" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="{{ SITEURL }}">
+    <meta name="twitter:site" content="@{{ TWITTER_USERNAME }}">
+    <meta name="twitter:creator" content="@{{ TWITTER_USERNAME }}">
+    <meta name="twitter:description" content="{{ SITEURL|striptags }}">
+    {% endif %}
+{% endif %}
+

@@ -54,6 +54,10 @@
         {% endif %}
     {% endif %}
 
+    <!-- Twitter cards -->
+    {% include 'includes/twitter_cards.html' %}
+    <!-- Bootstrap -->
+
     <!-- Bootstrap -->
     {% if BOOTSTRAP_THEME %}
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.{{ BOOTSTRAP_THEME }}.min.css" type="text/css"/>
