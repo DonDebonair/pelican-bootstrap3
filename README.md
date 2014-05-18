@@ -37,9 +37,9 @@ This theme honors the following standard Pelican settings:
 	* `DISQUS_SITENAME`
 	* `PIWIK_URL`, `PIWIK_SSL_URL` and `PIWIK_SITE_ID`
 * Twitter Cards
-       *  `TWITTER_CARD = True` add this to your pelicanconf.py to enable twitter cards.
-       *  `TWITTER_USERNAME` set this to your username (mine is set to "orvtech").
-       *  `TWITTER_ID` set this to your user ID, if you know it.
+        * `TWITTER_CARD = True` add this to your pelicanconf.py to enable twitter cards.
+        * `TWITTER_USERNAME` set this to your username (mine is set to "orvtech").
+        * `TWITTER_ID` set this to your user ID, if you know it.
 
 It uses the `tag_cloud` variable for displaying tags in the sidebar. You can control the amount of tags shown with: `TAG_CLOUD_MAX_ITEMS`
 
