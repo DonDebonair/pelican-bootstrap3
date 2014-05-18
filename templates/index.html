@@ -11,12 +11,11 @@
                 {% endif %}
                 <div class="summary">{{ article.summary }}
                     {% include 'includes/comment_count.html' %}
-                    <a class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ article.url }}">more ...</a>
+                    <a class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title }}">more ...</a>
                 </div>
             </article>
             <hr/>
         {% endfor %}
     {% endif %}
-
     {% include 'includes/pagination.html' %}
 {% endblock content %}
