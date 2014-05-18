@@ -6,7 +6,7 @@
     {% if SHOW_ARTICLE_AUTHOR %}
         {% if article.author %}
             <span class="label label-default">By</span>
-            <a href="{{ SITEURL }}/{{ article.author.url }}"><i class="fa fa-user"></i> {{ article.author }}</a>
+            <a href="{{ SITEURL }}/{{ article.author.url }}" rel="author"><i class="fa fa-user"></i> {{ article.author }}</a>
         {% endif %}
     {% endif %}
 
@@ -17,7 +17,7 @@
 
     {% if PDF_PROCESSOR %}
         <span class="label label-default">
-            <a href="{{ SITEURL }}/pdf/{{ article.slug }}.pdf">PDF</a>
+            <a href="{{ SITEURL }}/pdf/{{ article.slug }}.pdf" type="application/pdf">PDF</a>
         </span>
     {% endif %}
 
