@@ -1,5 +1,28 @@
 {% extends "base.html" %}
-{% block title %}{{ page.title }} - {{ SITENAME }}{% endblock %}
+
+{% block html_lang %}{{ page.lang }}{% endblock %}
+
+{% block head_title %}{{ page.title|striptags }}{% if page.subtitle %} - {{ page.subtitle|striptags }}{% endif %} @ {{ SITENAME }}{% endblock %}
+
+{% block head_meta %}
+{{ super() -}}
+{% if page.summary %}
+  <meta name="description" content="{{ page.summary|striptags }}" />
+{% endif %}
+{% endblock %}
+
+{% block head_opengraph %}
+{% if OPEN_GRAPH_FB_APP_ID %}
+  <meta property="fb:app_id" content="{{ OPEN_GRAPH_FB_APP_ID }}" />
+{% endif %}
+  <meta property="og:site_name" content="{{ SITENAME }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
+  <meta property="og:description" content="{{ page.summary|striptags }}" />
+{% endblock %}
+
+{% block body_class %}page{% endblock %}
 
 {% block breadcrumbs %}
     {% if DISPLAY_BREADCRUMBS %}
