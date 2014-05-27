@@ -14,7 +14,6 @@
 {% endblock %}
 
 {% block content %}
-{% for author, arts in authors|sort %}
-<li><a href="{{ author.url }}">{{ author }}</a> ({{ articles|count }})</li>
-{% endfor %}
+{% import 'includes/accordion.html' as accordion with context %}
+{{ accordion.accordion_for('authors', authors|sort) }}
 {% endblock %}

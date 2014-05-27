@@ -14,25 +14,6 @@
 {% endblock %}
 
 {% block content %}
-<div class="panel-group" id="accordion">
-  {% for cat, arts in categories|sort %}
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-{{ cat.slug }}">{{ cat }} <span class="badge pull-right">{{ arts|count }}</span></a>
-      </h4>
-    </div>
-    <div id="collapse-{{ cat.slug }}" class="panel-collapse collapse">
-      <div class="panel-body">
-        {% for article in arts %}
-        <p>
-          <span class="categories-timestamp"><time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time></span>
-          <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}{% if article.subtitle %} - {{ article.subtitle }}{% endif %}</a>
-        </p>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-  {% endfor %}
-</div>
+{% import 'includes/accordion.html' as accordion with context %}
+{{ accordion.accordion_for('categories', categories|sort) }}
 {% endblock %}
