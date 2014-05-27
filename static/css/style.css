@@ -2,6 +2,10 @@ body {
     padding-top: 70px;
 }
 
+.panel {
+    margin-bottom: 0;
+}
+
 #sidebar .list-group, #sidebar .list-group-item {
     background-color: transparent;
 }
@@ -131,7 +135,7 @@ figure.floatcenter, .align-center {
     width: 100%;
 }
 
-#categories ul, #tags ul {
+#authors ul, #categories ul, #tags ul {
     list-style: none;
     padding: 0;
     margin-left: 0;

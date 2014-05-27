@@ -36,7 +36,7 @@
   <a href="{{ SITEURL }}/{{ page.url }}" title="Permalink to {{ page.title|striptags }}" rel="bookmark">{{ page.title }}</a>
 </h1>
 {% if page.subtitle %}
-<h2>{{ page.subtitle|striptags }}</h2>
+<h2>{{ page.subtitle }}</h2>
 {% endif %}
 {% import 'includes/translations.html' as translations with context %}
 {{ translations.translations_for(page) }}
