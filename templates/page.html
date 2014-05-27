@@ -5,16 +5,16 @@
 {% block head_title %}{{ page.title|striptags }}{% if page.subtitle %} - {{ page.subtitle|striptags }}{% endif %} @ {{ SITENAME }}{% endblock %}
 
 {% block head_meta %}
-{{ super() -}}
-{% if page.summary %}
+{{- super() -}}
+  {% if page.summary %}
   <meta name="description" content="{{ page.summary|striptags }}" />
-{% endif %}
+  {% endif %}
 {% endblock %}
 
 {% block head_opengraph %}
-{% if OPEN_GRAPH_FB_APP_ID %}
+  {% if OPEN_GRAPH_FB_APP_ID %}
   <meta property="fb:app_id" content="{{ OPEN_GRAPH_FB_APP_ID }}" />
-{% endif %}
+  {% endif %}
   <meta property="og:site_name" content="{{ SITENAME }}" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{{ page.title }}" />
@@ -25,29 +25,38 @@
 {% block body_class %}page{% endblock %}
 
 {% block breadcrumbs %}
-    {% if DISPLAY_BREADCRUMBS %}
-        <ol class="breadcrumb">
-            <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
-            <li class="active">{{ page.title }}</li>
-        </ol>
-    {% endif %}
+<ol class="breadcrumb">
+  <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
+  <li class="active">{{ page.title }}</li>
+</ol>
+{% endblock %}
+
+{% block title %}
+<h1>
+  <a href="{{ SITEURL }}/{{ page.url }}" title="Permalink to {{ page.title|striptags }}" rel="bookmark">{{ page.title }}</a>
+</h1>
+{% if page.subtitle %}
+<h2>{{ page.subtitle|striptags }}</h2>
+{% endif %}
+{% import 'includes/translations.html' as translations with context %}
+{{ translations.translations_for(page) }}
+{% if PDF_PROCESSOR %}
+<div class="panel">
+  <div class="panel-body">
+    <span class="label label-default">
+      <a href="{{ SITEURL }}/pdf/{{ page.slug }}.pdf">as PDF</a>
+    </span>
+  </div>
+</div>
+{% endif %}
 {% endblock %}
 
 {% block content %}
-    <section id="content" class="body">
-        <h1 class="entry-title">{{ page.title }}</h1>
-        {% import 'includes/translations.html' as translations with context %}
-        {{ translations.translations_for(page) }}
-        {% if PDF_PROCESSOR %}
-            <a href="{{ SITEURL }}/pdf/{{ page.slug }}.pdf">
-                get the pdf
-            </a>
-        {% endif %}
-        <div class="entry-content">
-            {{ page.content }}
-            {% if page.comments == 'enabled' %}
-                {% include 'includes/comments.html' %}
-            {% endif %}
-        </div>
-    </section>
+{{- page.content -}}
+{% endblock %}
+
+{% block content_extra %}
+{% if page.comments == 'enabled' %}
+{% include 'includes/comments.html' %}
+{% endif %}
 {% endblock %}

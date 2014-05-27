@@ -5,80 +5,80 @@
 {% block head_title %}{{ article.title|striptags }}{% if article.subtitle %} - {{ article.subtitle|striptags }}{% endif %} @ {{ SITENAME }}{% endblock %}
 
 {% block head_meta %}
-{{ super() -}}
-{% if article.tags %}
+{{- super() -}}
+  {% if article.tags %}
   <meta name="keywords" content="{{ article.tags|join(', ')|striptags }}" />
-{% endif %}
-{% if article.summary %}
+  {% endif %}
+  {% if article.summary %}
   <meta name="description" content="{{ article.summary|striptags }}" />
-{% endif %}
+  {% endif %}
 {% endblock %}
 
 {% block head_opengraph %}
-{% if OPEN_GRAPH_FB_APP_ID %}
+  {% if OPEN_GRAPH_FB_APP_ID %}
   <meta property="fb:app_id" content="{{ OPEN_GRAPH_FB_APP_ID }}" />
-{% endif %}
+  {% endif %}
   <meta property="og:site_name" content="{{ SITENAME }}" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{{ article.title|striptags }}" />
   <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
   <meta property="og:description" content="{{ article.summary|striptags }}" />
   <meta property="article:published_time" content="{{ article.date.strftime("%Y-%m-%d") }}" />
-{% if article.category %}
+  {% if article.category %}
   <meta property="article:section" content="{{ article.category|striptags }}" />
-{% endif %}
-{% if article.tags %}
+  {% endif %}
+  {% if article.tags %}
   <meta property="article:tag" content="{{ article.tags|join(', ')|striptags }}" />
-{% endif %}
-{% if article.author %}
+  {% endif %}
+  {% if article.author %}
   <meta property="article:author" content="{{ article.author|striptags }}" />
-{% endif %}
+  {% endif %}
 {% endblock %}
 
 {% block body_class %}article{% endblock %}
 
 {% block breadcrumbs %}
-    {% if DISPLAY_BREADCRUMBS %}
-        {% if DISPLAY_CATEGORY_IN_BREADCRUMBS %}
-            <ol class="breadcrumb">
-                <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
-                <li><a href="{{ SITEURL }}/{{ article.category.url }}" title="{{ article.category }}">{{ article.category }}</a></li>
-                <li class="active">{{ article.title }}</li>
-            </ol>
-        {% else %}
-            <ol class="breadcrumb">
-                <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
-                <li class="active">{{ article.title }}</li>
-            </ol>
-        {% endif %}
-    {% endif %}
+{% if DISPLAY_CATEGORY_IN_BREADCRUMBS %}
+<ol class="breadcrumb">
+  <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
+  <li><a href="{{ SITEURL }}/{{ article.category.url }}" title="{{ article.category }}">{{ article.category }}</a></li>
+  <li class="active">{{ article.title }}</li>
+</ol>
+{% else %}
+<ol class="breadcrumb">
+  <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
+  <li class="active">{{ article.title }}</li>
+</ol>
+{% endif %}
+{% endblock %}
+
+{% block title %}
+<h1>
+  <a href="{{ SITEURL }}/{{ article.url }}" title="Permalink to {{ article.title|striptags }}" rel="bookmark">{{ article.title }}</a>
+</h1>
+{% if article.subtitle %}
+<h2>{{ article.subtitle|striptags }}</h2>
+{% endif %}
+{% import 'includes/translations.html' as translations with context %}
+{{ translations.translations_for(article) }}
+<div class="panel">
+  <div class="panel-body">
+
+    {% include "includes/article_info.html" %}
+
+
+  </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <section id="content">
-        <article>
-            <header class="page-header">
-                <h1>
-                    <a href="{{ SITEURL }}/{{ article.url }}"
-                       rel="bookmark"
-                       title="Permalink to {{ article.title|striptags }}">
-                        {{ article.title }}
-                    </a>
-                </h1>
-            </header>
-            <div class="entry-content">
-                <div class="panel">
-                    <div class="panel-body">
-                        {% include "includes/article_info.html" %}
-                    </div>
-                </div>
-                {{ article.content }}
-            </div>
-            <!-- /.entry-content -->
-            {% include 'includes/related-posts.html' %}
-            {% include 'includes/addthis.html' %}
-            {% include 'includes/comments.html' %}
-        </article>
-    </section>
+{{ article.content }}
+{% endblock %}
 
+{% block content_extra %}
+{% include 'includes/related-posts.html' %}
+{% include 'includes/addthis.html' %}
+{% if article.comments != 'disabled' %}
+{% include 'includes/comments.html' %}
+{% endif %}
 {% endblock %}
