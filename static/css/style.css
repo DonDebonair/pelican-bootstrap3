@@ -2,8 +2,10 @@ body {
     padding-top: 70px;
 }
 
-.panel {
+#title .panel {
     margin-bottom: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
 }
 
 #sidebar .list-group, #sidebar .list-group-item {

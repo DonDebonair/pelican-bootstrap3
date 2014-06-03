@@ -59,8 +59,6 @@
 {% if article.subtitle %}
 <h2>{{ article.subtitle|striptags }}</h2>
 {% endif %}
-{% import 'includes/translations.html' as translations with context %}
-{{ translations.translations_for(article) }}
 <div class="panel">
   <div class="panel-body">
 

@@ -38,14 +38,16 @@
 {% if page.subtitle %}
 <h2>{{ page.subtitle }}</h2>
 {% endif %}
-{% import 'includes/translations.html' as translations with context %}
-{{ translations.translations_for(page) }}
-{% if PDF_PROCESSOR %}
+{% if page.translations or PDF_PROCESSOR %}
 <div class="panel">
   <div class="panel-body">
+    {% if PDF_PROCESSOR %}
     <span class="label label-default">
       <a href="{{ SITEURL }}/pdf/{{ page.slug }}.pdf">as PDF</a>
     </span>
+    {% endif %}
+    {% import 'includes/translations.html' as translations with context %}
+    {{ translations.translations_for(page) }}
   </div>
 </div>
 {% endif %}
