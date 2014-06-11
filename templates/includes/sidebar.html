@@ -10,9 +10,10 @@
                   <ul class="list-group" id="social">
                     {% for name, link in SOCIAL %}
                         {% set name_sanitized = name|lower|replace('+','-plus')|replace(' ','-') %}
-                        {% set iconattributes = '"fa fa-' ~ name_sanitized ~ '-square fa-lg"' %}
-                        {% if name_sanitized == 'flickr' %}
+                        {% if name_sanitized in ['flickr', 'stack-overflow'] %}
                             {% set iconattributes = '"fa fa-' ~ name_sanitized ~ ' fa-lg"' %}
+                        {% else %}
+                            {% set iconattributes = '"fa fa-' ~ name_sanitized ~ '-square fa-lg"' %}
                         {% endif %}
                     <li class="list-group-item"><a href="{{ link }}"><i class={{ iconattributes }}></i> {{ name }}</a></li>
                     {% endfor %}
