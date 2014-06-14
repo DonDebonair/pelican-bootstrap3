@@ -1,11 +1,15 @@
 {% extends "index.html" %}
-{% block title %}{{ category }} - {{ SITENAME }}{% endblock %}
+
+{% block head_title %}{{ TITLE_CATEGORY_PRE|default('Category') }} {{ category|striptags }} @ {{ SITENAME }}{% endblock %}
+
 {% block breadcrumbs %}
-    {% if DISPLAY_BREADCRUMBS %}
-    <ol class="breadcrumb">
-        <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
-        <li><a href="{{ SITEURL}}/{{ CATEGORIES_URL }}" title="{{ SITENAME }} Categories">Categories</a></li>
-        <li class="active">{{ category }}</li>
-    </ol>
-    {% endif %}
+<ol class="breadcrumb">
+  <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
+  <li><a href="{{ SITEURL}}/{{ CATEGORIES_URL }}" title="{{ SITENAME }} {{ TITLE_CATEGORIES|default('Categories') }}">{{ TITLE_CATEGORIES|default('Categories') }}</a></li>
+  <li class="active">{{ category }}</li>
+</ol>
+{% endblock %}
+
+{% block title %}
+<h1>{{ TITLE_CATEGORY_PRE|default('Category') }} {{ category }}</h1>
 {% endblock %}

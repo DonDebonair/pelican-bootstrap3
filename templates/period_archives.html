@@ -1,0 +1,15 @@
+{% extends "archives.html" %}
+
+{% block head_title %}{{ TITLE_PERIOD_PRE|default('Archives for') }} {{ period|reverse|join(' ') }} @ {{ SITENAME }}{% endblock %}
+
+{% block breadcrumbs %}
+<ol class="breadcrumb">
+  <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
+  <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL|default('archives.html') }}" title="{{ TITLE_ARCHIVES|default('Archives') }}">{{ TITLE_ARCHIVES|default('Archives') }}</a></li>
+  <li class="active">{{ period|reverse|join(' ') }}</li>
+</ol>
+{% endblock %}
+
+{% block title %}
+<h1>{{ TITLE_PERIOD_PRE|default('Archives for') }} {{ period|reverse|join(' ') }}</h1>
+{% endblock %}
