@@ -29,11 +29,11 @@
   {% block head_base %}
   {% block head_favicon %}
   {### Place for site icons ###}
-  {% if SITEFAVICON or FAVICON %}
-  <link rel="shortcut icon" type="image/x-icon" href="{{ SITEURL }}/{{ SITEFAVICON|default(FAVICON) }}" />
+  {% if FAVICON %}
+  <link rel="shortcut icon" type="image/x-icon" href="{{ SITEURL }}/{{ FAVICON }}" />
   {% endif %}
-  {% if SITETOUCHICON %}
-  <link rel="apple-touch-icon" type="image/png" href="{{ SITEURL }}/{{ SITETOUCHICON }}" />
+  {% if TOUCHICON %}
+  <link rel="apple-touch-icon" type="image/png" href="{{ SITEURL }}/{{ TOUCHICON }}" />
   {% endif %}
   {% endblock %}
 

@@ -27,9 +27,9 @@
   {% if article.category %}
   <meta property="article:section" content="{{ article.category|striptags }}" />
   {% endif %}
-  {% if article.tags %}
-  <meta property="article:tag" content="{{ article.tags|join(', ')|striptags }}" />
-  {% endif %}
+  {% for tag in article.tags %}
+  <meta property="article:tag" content="{{ tag|striptags }}" />
+  {% endfor %}
   {% if article.author %}
   <meta property="article:author" content="{{ article.author|striptags }}" />
   {% endif %}
