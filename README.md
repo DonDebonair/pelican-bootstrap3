@@ -123,6 +123,15 @@ Set the `FAVICON` option in your `pelicanconf.py`. For example: `FAVICON = 'imag
 
 * If `DISPLAY_ARTICLE_INFO_ON_INDEX` is set to _True_, article info (date, tags) will be show under the title for each article, otherwise only title and summary will be shown (default). 
 
+### Short menu labels for pages
+
+By default, the title of a page is used both for showing the title as
+part of a page's content, and, if pages in menu is enabled, as the
+label of the corresponding menu item. You can choose a different label
+for the menu (such as a short single word) than the page title by adding a
+Menulabel metadata attribute to the page header (`Menulabel:` in
+markdown, `:Menulabel:` in rst).
+
 ### About Me
 
 You can show a short blurb of text about yourself and a picture. The following two settings are used for this:
