@@ -157,3 +157,12 @@ figure.floatcenter, .align-center {
 .tagcloud li {
     padding: 0px;
 }
+
+.article-info {
+    vertical-align:text-top;
+}
+
+.fa-lg {
+    vertical-align:baseline;
+    font-size:1em;
+}

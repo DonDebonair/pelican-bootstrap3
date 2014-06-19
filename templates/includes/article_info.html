@@ -1,18 +1,22 @@
 <footer class="post-info">
     <span class="label label-default">Date</span>
-    <span class="published">
+    <span class="article-info">
         <i class="fa fa-calendar"></i><time datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }}</time>
     </span>
     {% if SHOW_ARTICLE_AUTHOR %}
         {% if article.author %}
             <span class="label label-default">By</span>
-            <a href="{{ SITEURL }}/{{ article.author.url }}"><i class="fa fa-user"></i> {{ article.author }}</a>
+            <span class="article-info">
+                <a href="{{ SITEURL }}/{{ article.author.url }}"><i class="fa fa-user"></i> {{ article.author }}</a>
+            </span>
         {% endif %}
     {% endif %}
 
     {% if SHOW_ARTICLE_CATEGORY %}
         <span class="label label-default">Category</span>
-        <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+        <span class="article-info">
+            <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+        </span>
     {% endif %}
 
     {% if PDF_PROCESSOR %}
