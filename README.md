@@ -200,19 +200,17 @@ To get a `TWITTER_WIDGET_ID`, go to: https://twitter.com/settings/widgets and se
 
 ### Twitter Cards
 
-The theme can support [Summary Twitter Cards](https://dev.twitter.com/docs/cards/types/summary-card). To activate the necessary tags provide a `TWITTER_USERNAME` and then activate them by setting `TWITTER_CARDS` to `True`.
+The theme supports [Summary Twitter Cards](https://dev.twitter.com/docs/cards/types/summary-card). To activate the necessary tags set `TWITTER_CARDS` to `True`. Because _Twitter Cards_ also use Open Graph tags to identify some of the necessary metadata, `USE_OPEN_GRAPH` must also be set to `True` (which is the default).
 
-Tags will be shown in articles and pages if `USE_OPEN_GRAPH` is set to `True` (which is the default), because Twitter Cards Tags depends on og tags.
+You can optionally provide a `TWITTER_USERNAME` which will be used to set the Twitter username for the site and for the content creator.
 
-There is an optional configuration called `TWITTER_SITE` that permits to set the site creator, if this variable is not set, the `TWITTER_USERNAME` will be used.
-
-Finally, if you would to add an image for an article or a page that had to appear on Twitter Cards you could set it up by adding the property
+Finally, if you would to add an image for an article or a page that has to appear on Twitter Cards you can add the following property
 
 ```
 	:twitter_image: path/to/image.ext
 ```
 
-To the article (or page) file.
+To the article (or page) file. If you don't provide this, but `OPEN_GRAPH_IMAGE` is set, that will be used instead.
 
 ### Bootswatch and other Bootstrap 3 themes
 
