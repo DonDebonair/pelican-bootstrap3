@@ -1,0 +1,25 @@
+{% if TWITTER_CARDS and TWITTER_USERNAME and USE_OPEN_GRAPH %}
+    {# Do not include duplicates tag with og ones. #}
+    {# Twitter is able to infer them from og. #}
+    {% if article %}
+    <!-- Twitter Cards tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{ TWITTER_SITE or TWITTER_USERNAME }}">
+    <meta name="twitter:creator" content="@{{ TWITTER_USERNAME }}">
+    <meta name="twitter:domain" content="{{ SITEURL }}">
+    {% if article.twitter_image %}
+    <meta property="twitter:image"
+          content="{{ SITEURL }}/images/{{ article.twitter_image }}"/>
+    {% endif %}
+    {% elif page %}       
+    <!-- Twitter Cards tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="{{ SITEURL }}">
+    <meta name="twitter:site" content="@{{ TWITTER_SITE or  TWITTER_USERNAME }}">
+    <meta name="twitter:creator" content="@{{ TWITTER_USERNAME }}">
+    {% if page.twitter_image %}
+    <meta property="twitter:image"
+          content="{{ SITEURL }}/images/{{ page.twitter_image }}"/>
+    {% endif %}
+    {% endif %}
+{% endif %}
