@@ -24,6 +24,10 @@
             <meta property="fb:app_id" content="{{ OPEN_GRAPH_FB_APP_ID }}"/>
         {% endif %}
         <meta property="og:site_name" content="{{ SITENAME }}" />
+        {% if OPEN_GRAPH_IMAGE %}
+            <meta property="og:image"
+                  content="{{ SITEURL }}/static/{{ OPEN_GRAPH_IMAGE }}"/>
+        {% endif %}
         {% if article %}
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="{{ article.title|striptags }}"/>
@@ -48,10 +52,6 @@
             <meta property="og:title" content="{{ SITENAME }}"/>
             <meta property="og:url" content="{{ SITEURL }}"/>
             <meta property="og:description" content="{{ SITENAME }}"/>
-            {% if OPEN_GRAPH_IMAGE %}
-            <meta property="og:image"
-                  content="{{ SITEURL }}/static/{{ OPEN_GRAPH_IMAGE }}"/>
-            {% endif %}
         {% endif %}
     {% endif %}
 

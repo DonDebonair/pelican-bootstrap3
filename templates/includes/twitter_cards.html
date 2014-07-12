@@ -14,7 +14,7 @@
                   content="{{ SITEURL }}/images/{{ article.twitter_image }}"/>
         {% elif OPEN_GRAPH_IMAGE %}
             <meta property="twitter:image"
-                  content="{{ SITEURL }}/images/{{ OPEN_GRAPH_IMAGE }}"/>
+                  content="{{ SITEURL }}/static/{{ OPEN_GRAPH_IMAGE }}"/>
         {% endif %}
     {% elif page %}       
         <!-- Twitter Cards tags -->
@@ -27,7 +27,7 @@
                   content="{{ SITEURL }}/images/{{ page.twitter_image }}"/>
         {% elif OPEN_GRAPH_IMAGE %}
             <meta property="twitter:image"
-                  content="{{ SITEURL }}/images/{{ OPEN_GRAPH_IMAGE }}"/>
+                  content="{{ SITEURL }}/static/{{ OPEN_GRAPH_IMAGE }}"/>
         {% endif %}
     {% endif %}
 {% endif %}
