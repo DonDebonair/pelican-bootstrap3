@@ -11,10 +11,10 @@
         <meta name="twitter:domain" content="{{ SITEURL }}">
         {% if article.twitter_image %}
             <meta property="twitter:image"
-                  content="{{ SITEURL }}/images/{{ article.twitter_image }}"/>
+                  content="{{ SITEURL }}/{{ article.twitter_image }}"/>
         {% elif OPEN_GRAPH_IMAGE %}
             <meta property="twitter:image"
-                  content="{{ SITEURL }}/static/{{ OPEN_GRAPH_IMAGE }}"/>
+                  content="{{ SITEURL }}/{{ OPEN_GRAPH_IMAGE }}"/>
         {% endif %}
     {% elif page %}       
         <!-- Twitter Cards tags -->
@@ -24,10 +24,10 @@
         <meta name="twitter:creator" content="@{{ TWITTER_USERNAME }}">
         {% if page.twitter_image %}
             <meta property="twitter:image"
-                  content="{{ SITEURL }}/images/{{ page.twitter_image }}"/>
+                  content="{{ SITEURL }}/{{ page.twitter_image }}"/>
         {% elif OPEN_GRAPH_IMAGE %}
             <meta property="twitter:image"
-                  content="{{ SITEURL }}/static/{{ OPEN_GRAPH_IMAGE }}"/>
+                  content="{{ SITEURL }}/{{ OPEN_GRAPH_IMAGE }}"/>
         {% endif %}
     {% endif %}
 {% endif %}
