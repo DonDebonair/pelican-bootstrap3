@@ -13,6 +13,7 @@
     <link href="{{ SITEURL }}/{{ FAVICON }}" rel="icon">
     {% endif %}
 
+
     {# Open Graph tags #}
     {% if USE_OPEN_GRAPH is not defined %}
         {% set USE_OPEN_GRAPH = True %}
@@ -53,6 +54,9 @@
             {% endif %}
         {% endif %}
     {% endif %}
+
+    {# Twitter Cards tags #}
+    {% include 'includes/twitter_cards.html' %}
 
     <!-- Bootstrap -->
     {% if BOOTSTRAP_THEME %}

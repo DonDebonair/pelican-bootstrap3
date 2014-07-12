@@ -198,6 +198,22 @@ To get a `TWITTER_WIDGET_ID`, go to: https://twitter.com/settings/widgets and se
 
 `https://twitter.com/settings/widgets/TWITTER_WIDGET_ID/edit`
 
+### Twitter Cards
+
+The theme can support [Summary Twitter Cards](https://dev.twitter.com/docs/cards/types/summary-card). To activate the necessary tags provide a `TWITTER_USERNAME` and then activate them by setting `TWITTER_CARDS` to `True`.
+
+Tags will be shown in articles and pages if `USE_OPEN_GRAPH` is set to `True` (which is the default), because Twitter Cards Tags depends on og tags.
+
+There is an optional configuration called `TWITTER_SITE` that permits to set the site creator, if this variable is not set, the `TWITTER_USERNAME` will be used.
+
+Finally, if you would to add an image for an article or a page that had to appear on Twitter Cards you could set it up by adding the property
+
+```
+	:twitter_image: path/to/image.ext
+```
+
+To the article (or page) file.
+
 ### Bootswatch and other Bootstrap 3 themes
 
 I included all the lovely Bootstrap 3 themes from [Bootswatch](http://bootswatch.com/), built by [Thomas Park](https://github.com/thomaspark). You can tell Pelican what Bootswatch theme to use, by setting `BOOTSTRAP_THEME` to the desired theme, in lowercase (ie. 'readable' or 'cosmo' etc.). My own site is using _Readable_. If you want to use any other Bootstrap 3 compatible theme, just put the minified CSS in the `static/css` directory and rename it using the following naming scheme: `bootstrap.{theme-name}.min.css`. Then update the `BOOTSTRAP_THEME` variable with the _theme-name_ used.
