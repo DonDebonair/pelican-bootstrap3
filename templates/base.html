@@ -13,6 +13,30 @@
     <link href="{{ SITEURL }}/{{ FAVICON }}" rel="icon">
     {% endif %}
 
+    {# Twitter Cards tags #}
+    {% if TWITTER_CARDS_USERNAME is not defined %}
+        {% set TWITTER_CARDS_USERNAME = False %}
+    {% endif %}
+    {% if TWITTER_CARDS_VISIBLE is not defined %}
+        {% set TWITTER_CARDS_VISIBLE = False %}
+    {% endif %}
+
+    {% block twitter_cards %}
+        {% if TWITTER_CARDS_USERNAME and TWITTER_CARDS_VISIBLE %}
+            {% if article.twitterimage or FAVICON %}
+            <!-- Twitter Cards tags -->
+            <meta property="twitter:card" content="summary" />
+            <meta property="twitter:site" content="@{{ TWITTER_CARDS_USERNAME }}" />
+            <meta property="twitter:creator" content="@{{ TWITTER_CARDS_USERNAME }}" />
+            <meta property="twitter:domain" content="{{ SITEURL }}" />
+            <meta property="twitter:title" content="{{ article.title|striptags }}" />
+            <meta property="twitter:description" content="{{ article.summary|striptags|escape }}" />
+            <meta property="twitter:url" content="{{ SITEURL }}/{{ article.url }}" />
+            <meta property="twitter:image" content="{{ SITEURL }}/{{ article.twitterimage or FAVICON }}" />
+            {% endif %}
+        {% endif %}
+    {% endblock %}
+
     {# Open Graph tags #}
     {% if USE_OPEN_GRAPH is not defined %}
         {% set USE_OPEN_GRAPH = True %}
