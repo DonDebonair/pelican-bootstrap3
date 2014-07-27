@@ -9,7 +9,6 @@
   {# Twitter Cards tags #}
   {% include 'includes/twitter_cards.html' %}
 
-  {% block style_base %}
   {### Place for essential styles of theme ###}
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/font-awesome.min.css" />
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/bootstrap.{% if BOOTSTRAP_THEME %}{{ BOOTSTRAP_THEME }}.{% endif %}min.css" />
@@ -27,9 +26,7 @@
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ CUSTOM_CSS }}" />
   {% endif %}
   {% endblock %}
-  {% endblock style_base %}
 
-  {% block head_base %}
   {% block head_favicon %}
   {### Place for site icons ###}
   {% if FAVICON %}
@@ -83,13 +80,10 @@
   {% endblock %}
 
   {% block head_extra %}{% endblock %}
-  {% endblock head_base %}
 </head>
 <body class="{% block body_class %}archive{% endblock %}">
 
-{% block header_base %}
 {% include 'includes/header.html' %}
-{% endblock header_base %}
 
 {% block layout %}
 <article>
@@ -102,7 +96,6 @@
       {% block breadcrumbs %}{% endblock %}
       {% endif %}
 
-      {% block title_base %}
       <header id="title" class="entry-title page-header">
 
         {% block title %}
@@ -110,16 +103,13 @@
         {% endblock %}
 
       </header>
-      {% endblock title_base %}
 
-      {% block content_base %}
       <div id="content" class="entry-content">
 
         {% block content %}Sorry, but the content is not yet ready.{% endblock %}
         {% block content_extra %}{% endblock %}
 
       </div>
-      {% endblock %}
     </div>
 
     {% block sidebar %}
@@ -144,11 +134,8 @@
 </article>
 {% endblock layout %}
 
-{% block footer_base %}
 {% include 'includes/footer.html' %}
-{% endblock footer_base %}
 
-{% block script_base %}
 {### Place for essential scripts of theme ###}
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type="text/javascript">window.jQuery || document.write('<script src="{{ SITEURL }}/theme/js/jquery.min.js">\x3C/script>')</script>
@@ -165,6 +152,5 @@
 {% include 'includes/ga.html' %}
 {% include 'includes/piwik.html' %}
 {% endblock script %}
-{% endblock script_base %}
 </body>
 </html>
