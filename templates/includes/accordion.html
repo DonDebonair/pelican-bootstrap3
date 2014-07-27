@@ -1,0 +1,26 @@
+{% macro accordion_for(id, pairs) %}
+<div class="panel-group" id="{{ id }}">
+  {% for el, arts in pairs %}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        {% if el.url %}
+        <span><a href="{% if not el.url.startswith('http') %}{{ SITEURL }}/{% endif %}{{ el.url }}"><i class="fa fa-folder-o"></i></a></span>
+        {% endif %}
+        <a data-toggle="collapse" data-parent="#{{ id }}" href="#collapse-{{ el.slug }}">{{ el }} <span class="badge pull-right">{{ arts|count }}</span></a>
+      </h4>
+    </div>
+    <div id="collapse-{{ el.slug }}" class="panel-collapse collapse">
+      <div class="panel-body">
+        {% for article in arts %}
+        <p>
+          <span class="categories-timestamp"><time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time></span>
+          <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}{% if article.subtitle %} - {{ article.subtitle }}{% endif %}</a>
+        </p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endmacro %}
