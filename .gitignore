@@ -8,3 +8,6 @@
 output
 .idea/*
 .env
+*.ipr
+*.iml
+*.iws

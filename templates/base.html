@@ -6,6 +6,9 @@
   <meta http-equiv="content-type" content="text/html; charset={{ DEFAULT_CHARSET }}" />
   <title>{% block head_title %}{{ SITENAME }}{% endblock %}</title>
 
+  {# Twitter Cards tags #}
+  {% include 'includes/twitter_cards.html' %}
+
   {% block style_base %}
   {### Place for essential styles of theme ###}
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/font-awesome.min.css" />
@@ -64,7 +67,7 @@
   <meta property="og:url" content="{{ SITEURL }}" />
   <meta property="og:description" content="{{ SITENAME }}" />
   {% if OPEN_GRAPH_IMAGE %}
-  <meta property="og:image" content="{{ SITEURL }}/static/{{ OPEN_GRAPH_IMAGE }}" />
+  <meta property="og:image" content="{{ SITEURL }}/{{ OPEN_GRAPH_IMAGE }}" />
   {% endif %}
   {% endblock %}
   {% endif %}

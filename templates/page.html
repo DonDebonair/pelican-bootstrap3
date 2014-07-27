@@ -27,7 +27,9 @@
 {% block breadcrumbs %}
 <ol class="breadcrumb">
   <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
+  {% if page.url %}
   <li class="active">{{ page.title }}</li>
+  {% endif %}
 </ol>
 {% endblock %}
 
