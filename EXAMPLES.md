@@ -20,3 +20,29 @@ If your website is listed here, but you don't want it to be, let me know and I'l
 [Rebecca Weiss](http://www.rebeccaweiss.info/) by [rjweiss](https://github.com/rjweiss)
 
 [Theory And Practice](http://theoryandpractice.org/) by [cranmer](https://github.com/cranmer) - Nice customization of the frontpage, using widgets.
+
+[The official ncf website](http://www.ncf.io/) by [Normation](https://github.com/Normation)
+
+[Lappland. Inside Out.](http://lappland.io/) by [hlapp](https://github.com/hlapp)
+
+[Kev009.com](http://kev009.com/wp/) by [kev009](https://github.com/kev009)
+
+[dave_tucker:blog](http://dtucker.co.uk/) by [dave-tucker](https://github.com/dave-tucker)
+
+[Dopey's Corner](http://dopey.io/)
+
+[Toni Mueller](http://www.tonimueller.org/) by [muellert](https://github.com/muellert)
+
+[Caffeinated Engineering](http://caffeinatedengineering.com/) by [mattyjones](https://github.com/mattyjones)
+
+[Duncan Murdock](http://www.duncanmurdock.name/) by [damurdock](https://github.com/damurdock)
+
+[Ryan Gregory James](http://csc.ucdavis.edu/~rgjames/) by [Autoplectic](https://github.com/Autoplectic)
+
+[JPoser/Blog](http://jposer.net/) by [JPoser](https://github.com/JPoser)
+
+[Base-Art](http://base-art.net/) by [philn](https://github.com/philn)
+
+[Jason Antman's Blog](http://blog.jasonantman.com/)  by [jantman](https://github.com/jantman)
+
+[Bryce Boe](http://bryceboe.com/) by [bboe](https://github.com/bboe)
