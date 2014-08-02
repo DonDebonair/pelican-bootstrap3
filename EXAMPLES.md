@@ -17,4 +17,6 @@ don't want it to be, let me know and I'll remove it.
 
 [Christine Doig](http://chdoig.github.io/) by [chdoig](https://github.com/chdoig) - Barely recognizable anymore as pelican-boostrap3, but it is in fact [based on this theme](http://chdoig.github.io/create-pelican-blog.html). The Twitter widget has been contributed back to pelican-bootstrap3
 
-[justmytwospence](http://spencerboucher.com/) by [justmytwospence](https://github.com/justmytwospence) - Lovely customizations that make it fresh and also practical for any [CS & Data Science related blogging](http://spencerboucher.com/moving-to-pelican/).
+[Rebecca Weiss](http://www.rebeccaweiss.info/) by [rjweiss](https://github.com/rjweiss)
+
+[Theory And Practice](http://theoryandpractice.org/) by [cranmer](https://github.com/cranmer) - Nice customization of the frontpage, using widgets.
