@@ -1,10 +1,10 @@
 # Examples in the wild
 
 This is a non-exhaustive list of websites that use **pelican-boostrap3** as their theme. It shows the versatility of
-the theme (which is one of the perks of using Bootstrap 3). If your website provides a unique take on **pelican-bootstrap3*
-and you want your website to be listed here, don't hesitate to ask or make a pull-request! I reserve the right to refuse
-websites if they're not unique enough for my tastes or if I find them offensive. If your website is listed here, but you
-don't want it to be, let me know and I'll remove it.
+the theme (which is one of the perks of using Bootstrap 3). If your website provides a unique take on 
+**pelican-bootstrap3** and you want your website to be listed here, don't hesitate to ask or make a pull-request! 
+I reserve the right to refuse websites if they're not unique enough for my tastes or if I find them offensive. 
+If your website is listed here, but you don't want it to be, let me know and I'll remove it.
 
 
 [DandyDev.net](http://dandydev.net) by [DandyDev](https://github.com/DandyDev) (Main author of pelican-bootstrap3) - Basic pelican-bootstrap3 setup using the _Simplex_ Bootswatch theme.
