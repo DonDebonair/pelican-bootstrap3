@@ -21,6 +21,10 @@
     <link rel="apple-touch-icon" href="{{ SITEURL }}/{{ TOUCHICON }}">
     {% endif %}
 
+    {% block meta %}
+        <meta name="author" content="{{ AUTHOR }}" />
+    {% endblock %}
+
     {# Open Graph tags #}
     {% if USE_OPEN_GRAPH is not defined %}
         {% set USE_OPEN_GRAPH = True %}

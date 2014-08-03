@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }} - {{ SITENAME }}{% endblock %}
 {% block html_lang %}{{ page.lang }}{% endblock %}
+{% block meta %}
+    {% if page.author %}
+        <meta name="author" content="{{ page.author }}" />
+    {% else %}
+        <meta name="author" content="{{ AUTHOR }}" />
+    {% endif %}
+    {% if page.summary %}
+        <meta name="description" content="{{ page.summary|striptags|escape }}" />
+    {% endif %}
+{% endblock %}
 {% block opengraph %}
     {% if OPEN_GRAPH_FB_APP_ID %}
         <meta property="fb:app_id" content="{{ OPEN_GRAPH_FB_APP_ID }}"/>
