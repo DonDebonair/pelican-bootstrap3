@@ -10,6 +10,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    {% if EXTRA_HEADER %}
+        {{ EXTRA_HEADER }}
+    {% endif %}
+
     {# Favicons are a touchy subject. For reasoning for the following code, see: http://stackoverflow.com/a/23851464/872397 #}
     {% if FAVICON %}
     <link href="{{ SITEURL }}/{{ FAVICON }}" rel="icon">
