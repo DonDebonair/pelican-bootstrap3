@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title %}{{ article.title|striptags }} - {{ SITENAME }}{% endblock %}
+{% block html_lang %}{{ article.lang }}{% endblock %}
 
 {% block breadcrumbs %}
     {% if DISPLAY_BREADCRUMBS %}

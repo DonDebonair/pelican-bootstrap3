@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock %}"
+      {% if USE_OPEN_GRAPH %}
       xmlns:og="http://ogp.me/ns#"
-      xmlns:fb="https://www.facebook.com/2008/fbml">
+      xmlns:fb="https://www.facebook.com/2008/fbml"{% endif %}>
 <head>
     <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
     <!-- Using the latest rendering mode for IE -->
