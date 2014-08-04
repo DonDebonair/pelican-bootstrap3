@@ -13,6 +13,7 @@
     <link href="{{ SITEURL }}/{{ FAVICON }}" rel="icon">
     {% endif %}
 
+    {% block canonical_rel %}{% endblock %}
 
     {# Open Graph tags #}
     {% if USE_OPEN_GRAPH is not defined %}
