@@ -44,6 +44,10 @@
     {% endif %}
 {% endblock %}
 
+{% block canonical_rel %}
+<link rel="canonical" href="{{ SITEURL }}/{{ article.url }}">
+{% endblock %}
+
 {% block breadcrumbs %}
     {% if DISPLAY_BREADCRUMBS %}
         {% if DISPLAY_CATEGORY_IN_BREADCRUMBS %}
