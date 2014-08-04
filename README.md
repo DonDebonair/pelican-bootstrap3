@@ -41,6 +41,12 @@ It uses the `tag_cloud` variable for displaying tags in the sidebar. You can con
 
 ## Extras
 
+### Bootswatch and other Bootstrap 3 themes
+
+Part of the versatility of this theme comes from the fact that I included all the lovely Bootstrap 3 themes from [Bootswatch](http://bootswatch.com/), built by [Thomas Park](https://github.com/thomaspark). You can tell Pelican what Bootswatch theme to use, by setting `BOOTSTRAP_THEME` to the desired theme, in lowercase (ie. 'readable' or 'cosmo' etc.). My own site is using _Readable_. If you want to use any other Bootstrap 3 compatible theme, just put the minified CSS in the `static/css` directory and rename it using the following naming scheme: `bootstrap.{theme-name}.min.css`. Then update the `BOOTSTRAP_THEME` variable with the _theme-name_ used.
+
+#### Update: Readable has seen some major changes. I added the new version as 'readable' and renamed the old version to 'readable-old'. Update your config accordingly.
+
 ### Article info
 
 Set `SHOW_ARTICLE_AUTHOR` to True to show the author of the article at the top of the article and in the index of articles. Set `SHOW_ARTICLE_CATEGORY` to show the Category of each article.
@@ -114,6 +120,10 @@ If you wish to use the inverse navbar from Bootstrap, set the flag `BOOTSTRAP_NA
 ### Related Posts
 
 This theme has support for the [Related Posts plugin](https://github.com/getpelican/pelican-plugins/tree/master/related_posts). All you have to do, is enable the plugin, and the theme will do the rest.
+
+### IPython Notebook support
+
+This theme supports including IPython notebooks through the [Liquid Tags plugin](https://github.com/getpelican/pelican-plugins/tree/master/liquid_tags). If you enable the plugin, the theme will automatically include the right CSS/JS to make the notebooks work.
 
 ### Favicon
 
@@ -190,6 +200,19 @@ The theme can show your most recently active GitHub repos in the sidebar. To ena
 * `GITHUB_SKIP_FORK`
 * `GITHUB_SHOW_USER_LINK`
 
+### Facebook Open Graph
+
+In order to make the Facebook like button and other social sharing options work better, the template contains Open Graph metatags like `<meta property="og:type" content="article"/>`. You can disable them by setting `USE_OPEN_GRAPH` to _False_. You can use `OPEN_GRAPH_FB_APP_ID` to provide a Facebook _app id_. 
+You can also provide a default image that will be passed as an Open Graph tag  by setting `OPEN_GRAPH_IMAGE` to a relative file path, which will be prefixed by your site's base url. Optionally, you can override this default image on a per article and per page basis, by setting the `og_image` variable in an article or page.
+
+### Twitter Cards
+
+The theme supports [Summary Twitter Cards](https://dev.twitter.com/docs/cards/types/summary-card). To activate the necessary tags set `TWITTER_CARDS` to `True`. Because _Twitter Cards_ also use Open Graph tags to identify some of the necessary metadata, `USE_OPEN_GRAPH` must also be set to `True` (which is the default).
+
+You can optionally provide a `TWITTER_USERNAME` which will be used to set the Twitter username for the site and for the content creator.
+
+The same image options for Open Graph (see above) can be used for setting images that appear on Twitter Cards. So if you have set an `OPEN_GRAPH_IMAGE` and optionally `og_image` for articles and/or pages, you're good to go for Twitter Cards as well.
+
 ### Twitter Timeline
 
 The theme can show your twitter timeline in the sidebar. To enable, provide a `TWITTER_USERNAME` and a `TWITTER_WIDGET_ID`.
@@ -198,36 +221,12 @@ To get a `TWITTER_WIDGET_ID`, go to: https://twitter.com/settings/widgets and se
 
 `https://twitter.com/settings/widgets/TWITTER_WIDGET_ID/edit`
 
-### Twitter Cards
-
-The theme supports [Summary Twitter Cards](https://dev.twitter.com/docs/cards/types/summary-card). To activate the necessary tags set `TWITTER_CARDS` to `True`. Because _Twitter Cards_ also use Open Graph tags to identify some of the necessary metadata, `USE_OPEN_GRAPH` must also be set to `True` (which is the default).
-
-You can optionally provide a `TWITTER_USERNAME` which will be used to set the Twitter username for the site and for the content creator.
-
-Finally, if you would to add an image for an article or a page that has to appear on Twitter Cards you can add the following property
-
-```
-	:twitter_image: path/to/image.ext
-```
-
-To the article (or page) file. If you don't provide this, but `OPEN_GRAPH_IMAGE` is set, that will be used instead.
-
-### Bootswatch and other Bootstrap 3 themes
-
-I included all the lovely Bootstrap 3 themes from [Bootswatch](http://bootswatch.com/), built by [Thomas Park](https://github.com/thomaspark). You can tell Pelican what Bootswatch theme to use, by setting `BOOTSTRAP_THEME` to the desired theme, in lowercase (ie. 'readable' or 'cosmo' etc.). My own site is using _Readable_. If you want to use any other Bootstrap 3 compatible theme, just put the minified CSS in the `static/css` directory and rename it using the following naming scheme: `bootstrap.{theme-name}.min.css`. Then update the `BOOTSTRAP_THEME` variable with the _theme-name_ used.
-
-#### Update: Readable has seen some major changes. I added the new version as 'readable' and renamed the old version to 'readable-old'. Update your config accordingly.
-
 ### AddThis
 
 You can enable sharing buttons through [AddThis](http://www.addthis.com/) by setting `ADDTHIS_PROFILE` to your AddThis profile-id. This will display a **Tweet**, **Facebook Like** and **Google +1** button under each post.
 
 * AddThis automatically adds a short hashtag to the end of your URLs. This lets you reveal how often visitors copy your URL from their address bar to share. Example of URL: `http://domain.com/page.html#UF0983`. This function can be disabled by setting `ADDTHIS_DATA_TRACK_ADDRESSBAR` to _False_.
 * All social buttons are enabled by default. You can disable certain button by setting following properties to _False_: `ADDTHIS_FACEBOOK_LIKE`, `ADDTHIS_TWEET`, `ADDTHIS_GOOGLE_PLUSONE`.
-
-### Facebook Open Graph
-
-In order to make the Facebook like button work better, the template contains Open Graph metatags like `<meta property="og:type" content="article"/>`. You can disable them by setting `USE_OPEN_GRAPH` to _False_. You can use `OPEN_GRAPH_FB_APP_ID` to provide a Facebook _app id_. You can also provide a default image that will be passed to Facebook for the homepage of you site by setting `OPEN_GRAPH_IMAGE` to a relative file path, which will be prefixed by your site's static directory.
 
 ### Footer
 
