@@ -109,9 +109,11 @@
                 {% endfor %}
                 {% if DISPLAY_PAGES_ON_MENU %}
                     {% for p in PAGES %}
-                         <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">
+                         {% if p.addtomenu is undefined or p.addtomenu == "True" %}
+                             <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">
                              {{ p.menulabel|default(p.title) }}
-                          </a></li>
+                             </a></li>
+                          {% endif %}
                       {% endfor %}
                 {% endif %}
                 {% if DISPLAY_CATEGORIES_ON_MENU %}

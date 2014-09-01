@@ -142,6 +142,14 @@ for the menu (such as a short single word) than the page title by adding a
 Menulabel metadata attribute to the page header (`Menulabel:` in
 markdown, `:Menulabel:` in rst).
 
+### Hide pages from menu
+
+By default, pages are shown in the menu, if the pages menu is enabled.
+This can be changed by adding the page metadata attribute `AddToMenu`.
+
+If set to `True` (default), then the page will be shown in the menu. 
+If set to `False` (or anything != True), the page will not be shown in the menu.
+
 ### About Me
 
 You can show a short blurb of text about yourself and a picture. The following two settings are used for this:
