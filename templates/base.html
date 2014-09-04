@@ -116,9 +116,25 @@
                 {% endif %}
                 {% if DISPLAY_CATEGORIES_ON_MENU %}
                     {% for cat, null in categories %}
+                        {% if DISPLAY_CATEGORIES_ON_MENU_AS_DROPDOWN %}
+                        <li class="dropdown">
+                                      <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="{{ cat.slug }}">{{cat | capitalize }} <span class="caret"></span></a>
+                              <ul class="dropdown-menu" aria-labelledby="{{ cat.slug }}">
+                                {% for category, articles in categories %}
+                                    {% if cat == category %}
+                                        {% for article in  articles |sort(attribute='sortorder')  %}
+                                                <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
+                                        {% endfor %}
+                                    {% endif %}
+                                {% endfor %}
+                              </ul>
+                            </li>
+                        </li>
+                        {% else %}
                         <li {% if cat == category %}class="active"{% endif %}>
                             <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat | capitalize }}</a>
                         </li>
+                        {% endif %}
                     {% endfor %}
                 {% endif %}
             </ul>
