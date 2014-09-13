@@ -9,7 +9,7 @@ If your website is listed here, but you don't want it to be, let me know and I'l
 
 [DandyDev.net](http://dandydev.net) by [DandyDev](https://github.com/DandyDev) (Main author of pelican-bootstrap3) - Basic pelican-bootstrap3 setup using the _Simplex_ Bootswatch theme.
 
-[Winlus blog](http://www.heroicdebugging.biz/) by [ingwinlu](https://github.com/ingwinlu) - Customized pelican-bootstrap3 based design using panels. Shows off the `USE_PAGER` setting.
+[Winlus blog](http://bs3.heroicdebugging.biz/) by [ingwinlu](https://github.com/ingwinlu) - Customized pelican-bootstrap3 based design using panels. Shows off the `USE_PAGER` setting.
 
 [Mind Bending](http://mindbending.org/en) by [magnunleno](https://github.com/magnunleno) - Heavily customized design based on pelican-bootstrap3 with lots of stuff added. Some of that stuff was neatly contributed back to pelican-boostrap3.
 
