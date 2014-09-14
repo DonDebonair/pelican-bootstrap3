@@ -42,6 +42,13 @@ body {
     font-size: 6pt;
 }
 
+#aboutme {
+    padding-top: 0px;
+    padding-bottom: 5px;
+    -ms-word-break: normal;
+    word-break: normal;
+}
+
 #sidebar {
     padding-top: 0px;
     -ms-word-break: break-all;
