@@ -242,7 +242,7 @@ This theme has support for the
 All you have to do, is:
 - enable the plugin, and the theme will add a search box on the right
   side of the menu
-- Add `DIRECT_TEMPLATES = (('search'))` in your `pelicanconf.py`.
+- Add `DIRECT_TEMPLATES = (('search',))` in your `pelicanconf.py`.
 
 
 ### Footer
