@@ -232,8 +232,12 @@ You can enable sharing buttons through [AddThis](http://www.addthis.com/) by set
 
 This theme has support for the
 [Tipue Search plugin](https://github.com/getpelican/pelican-plugins/tree/master/tipue_search).
-All you have to do, is enable the plugin, and the theme will add a
-search box on the right side of the menu.
+
+All you have to do, is:
+- enable the plugin, and the theme will add a search box on the right
+  side of the menu
+- Add `DIRECT_TEMPLATES = (('search'))` in your `pelicanconf.py`.
+
 
 ### Footer
 
