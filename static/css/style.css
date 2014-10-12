@@ -170,3 +170,54 @@ figure.floatcenter, .align-center {
 .tagcloud li {
     padding: 0px;
 }
+
+#banner {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: scroll;
+    background-size: cover; 
+    background-color: #C4C4C4;
+    margin: 0 0 20px;
+    padding: 70px 0; /*controls padding around inner text*/
+    position: relative;
+}
+
+#banner .copy {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.7);
+    display: inline;
+    float: left;
+    max-width: 600px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+#banner h1 {
+    color: #fff;
+    font-family: "HelveticaNeue-CondensedBold","Helvetica Neue CE 600 Condensed","Helvetica Neue LT Condensed","Helvetica Neue 600 Condensed","HelveticaNeue-BoldCondensed","Helvetica Neue BoldCondensed","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 60px;
+    font-stretch: condensed;
+    font-weight: 700;
+    line-height: 0.9;
+    margin: 0;
+    text-transform: uppercase;
+}
+#banner .intro {
+    color: #fff;
+    font-size: 21px;
+    line-height: 1.33;
+    opacity: 0.75;
+}
+#banner .btn, #banner .intro {
+    margin-left: 4px;
+}
+
+/* Solutions for mobile and small screens  */
+@media (max-width: 650px) {
+    #banner h1{
+       font-size: 30px; /* !important;*/
+    }
+    #banner .intro{
+        font-size: 16px;
+    }
+}
