@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}Photo - {{ photo.title }}{% endblock %}
+
+{% block breadcrumbs %}
+    {% if DISPLAY_BREADCRUMBS %}
+    <ol class="breadcrumb">
+        <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
+        <li class="active">Photos</li>
+    </ol>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    {{ photoset.title }}
+                </h1>
+                <h2>
+                    {{ photo.title }}
+                </h2>
+            </header>
+            <ul class="pagination">
+                {% if photo_previous %}
+                    <li class="prev">
+                        <a href="{{ SITEURL }}{{ photo_previous.url }}">&laquo;</a>
+                    </li>
+                {% else %}
+                    <li class="prev disabled"><a href="#">&laquo;</a></li>
+                {% endif %}
+                    <li><a href="{{ SITEURL }}{{ photoset.url }}">Return to Set</a></li>
+                {% if photo_next %}
+                    <li class="next">
+                        <a href="{{ SITEURL }}{{ photo_next.url }}">&raquo;</a>
+                    </li>
+                {% else %}
+                    <li class="next disabled"><a href="#">&raquo;</a></li>
+                {% endif %}
+
+            </ul>
+            <div class="entry-content">
+                <a href="{{photo.sizes.original.source}}">
+                    <img src="{{photo.sizes.original.source}}" title="{{photo.title}}" />
+
+                </a>
+
+            </div>
+        </article>
+        <ul class="pagination">
+            {% if photo_previous %}
+                <li class="prev">
+                    <a href="{{ SITEURL }}{{ photo_previous.url }}">&laquo;</a>
+                </li>
+            {% else %}
+                <li class="prev disabled"><a href="#">&laquo;</a></li>
+            {% endif %}
+                <li><a href="{{ SITEURL }}{{ photoset.url }}">Return to Set</a></li>
+            {% if photo_next %}
+                <li class="next">
+                    <a href="{{ SITEURL }}{{ photo_next.url }}">&raquo;</a>
+                </li>
+            {% else %}
+                <li class="next disabled"><a href="#">&raquo;</a></li>
+            {% endif %}
+
+        </ul>
+    </section>
+
+{% endblock %}

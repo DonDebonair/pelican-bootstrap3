@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Flickr Photos - {{ SITENAME }}{% endblock %}
+
+{% block breadcrumbs %}
+    {% if DISPLAY_BREADCRUMBS %}
+    <ol class="breadcrumb">
+        <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
+        <li class="active">Photos</li>
+    </ol>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <section id="content">
+
+        <h1>Photo Sets</h1>
+        <article>
+            {% for set in flickr_sets %}
+            <header class="page-header">
+                <h2>
+                    <a href="{{ set.url }}">
+                        {{ set.title }}
+                    </a>
+                </h2>
+            </header>
+            <div class="entry-content">
+                <div>
+                <a href="{{ set.url }}">
+                    <img src="{{ set.primary.sizes.largesquare.source }}" />
+                </a>
+                </div>
+                <div>
+                {{ set.description }}
+                </div>
+            </div>
+            <hr>
+            {% endfor %}
+        </article>
+    </section>
+{% endblock %}
