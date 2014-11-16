@@ -186,6 +186,10 @@ If you're using reStructuredText for writing articles and pages, you can include
 * You can also enable Disqus comments for pages. This is a per-page setting you can control by adding a field `comments` to you pages' metadata. Set it to _enabled_ to enable comments for that page. Comment-threads for pages will have an id that is prefixed by 'page-'.
 * To show Disqus comment counts on the index page, set DISQUS_DISPLAY_COUNTS to _True_.
 
+### Categories as Dropdown
+
+If the configuration setting `DISPLAY_CATEGORIES_ON_MENU_AS_DROPDOWN` (default `False`)  is set to `True`, then the pages in categories are displayed as a dropdown in the site menu. The articlesa are ordered by the attribute `SortOrder` (if set).
+
 ### Content license
 
 You can optionally declare a [Creative Commons license](http://creativecommons.org) for the content of your site. It will appear in the site's footer. To enable, use one of the following two ways for configuration.
