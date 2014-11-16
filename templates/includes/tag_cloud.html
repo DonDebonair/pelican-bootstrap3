@@ -1,0 +1,18 @@
+{% if DISPLAY_TAGS_INLINE %}
+    {% set tags = tag_cloud | sort(attribute='0') %}
+{% else %}
+    {% set tags = tag_cloud | sort(attribute='1') %}
+{% endif %}
+
+<li class="list-group-item"><a href="{{ SITEURL }}/{{ TAGS_URL }}"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+    <ul class="list-group {% if DISPLAY_TAGS_INLINE %}list-inline tagcloud{% endif %}" id="tags">
+
+    {% for tag in tags %}
+        <li class="list-group-item tag-{{ tag.1 }}">
+            <a href="{{ SITEURL }}/{{ tag.0.url }}">
+                {{ tag.0 }}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+</li>
