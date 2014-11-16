@@ -130,12 +130,9 @@
     </div>
 </div> <!-- /.navbar -->
 <!-- Banner -->
-{% if BANNER_INDEX_ONLY is not defined %}
-    {% set BANNER_INDEX_ONLY = True %}
-{% endif %}
-{% if BANNER and not BANNER_INDEX_ONLY %}
+{% if BANNER and BANNER_ALL_PAGES %}
     {% include 'includes/banner.html' %}
-{% elif BANNER and BANNER_INDEX_ONLY %}
+{% elif BANNER and not BANNER_ALL_PAGES %}
     {% block banner %}{% endblock %}
 {% endif %}
 <!-- End Banner -->
