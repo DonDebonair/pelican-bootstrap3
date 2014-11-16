@@ -149,6 +149,14 @@ You can show a short blurb of text about yourself and a picture. The following t
 * Your 'About Me' paragraph will be whatever the `ABOUT_ME` variable is set to (raw html is allowed)
 * Your avatar can be set by pointing the `AVATAR` variable to the relevant picture (e.g. 'images/profile.png')
 
+### Banner Image
+
+A banner image can be added to the theme, displayed with the SITENAME and an optional subtitle. Config options are as follows:
+
+* Set the banner image with `BANNER = '/path/to/banner.png'`
+* Set the subtitle text with `BANNER_SUBTITLE = 'This is my subtitle'`
+* By default, the banner is only shown on the index page. To display the banner on all pages, set `BANNER_INDEX_ONLY = False`
+
 ### Sidebar options
 
 The following things can be displayed on the sidebar:

@@ -129,7 +129,16 @@
         <!-- /.navbar-collapse -->
     </div>
 </div> <!-- /.navbar -->
-
+<!-- Banner -->
+{% if BANNER_INDEX_ONLY is not defined %}
+    {% set BANNER_INDEX_ONLY = True %}
+{% endif %}
+{% if BANNER and not BANNER_INDEX_ONLY %}
+    {% include 'includes/banner.html' %}
+{% elif BANNER and BANNER_INDEX_ONLY %}
+    {% block banner %}{% endblock %}
+{% endif %}
+<!-- End Banner -->
 <div class="container">
     <div class="row">
         {% if not HIDE_SIDEBAR or ABOUT_ME %}
@@ -167,6 +176,9 @@
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
 <script src="{{ SITEURL }}/theme/js/respond.min.js"></script>
 
+{% if BANNER %}
+    <script src="{{ SITEURL }}/theme/js/bodypadding.js"></script>
+{% endif %}
 {% include 'includes/github-js.html' %}
 {% include 'includes/disqus_script.html' %}
 {% include 'includes/ga.html' %}
