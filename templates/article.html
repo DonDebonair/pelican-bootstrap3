@@ -15,8 +15,10 @@
     {% endif %}
 {% endblock %}
 {% block opengraph %}
-    {% if OPEN_GRAPH_FB_APP_ID %}
-        <meta property="fb:app_id" content="{{ OPEN_GRAPH_FB_APP_ID }}"/>
+    {% if USE_OPEN_GRAPH %}
+        {% if OPEN_GRAPH_FB_APP_ID %}
+            <meta property="fb:app_id" content="{{ OPEN_GRAPH_FB_APP_ID }}"/>
+        {% endif %}
         <meta property="og:site_name" content="{{ SITENAME }}" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="{{ article.title|striptags|escape }}"/>
