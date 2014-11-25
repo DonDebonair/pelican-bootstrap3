@@ -6,9 +6,9 @@
 <head>
     <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
     <!-- Using the latest rendering mode for IE -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     {% if 'liquid_tags.notebook' in PLUGINS %}
         {% include 'includes/liquid_tags_nb_header.html' %}
@@ -16,13 +16,13 @@
 
     {# Favicons are a touchy subject. For reasoning for the following code, see: http://stackoverflow.com/a/23851464/872397 #}
     {% if FAVICON %}
-    <link href="{{ SITEURL }}/{{ FAVICON }}" rel="icon">
+    <link href="{{ SITEURL }}/{{ FAVICON }}" rel="icon" />
     {% endif %}
     {% if FAVICON_IE %}
     <!--[if IE]><link rel="shortcut icon" href="{{ SITEURL }}/{{ FAVICON_IE }}"><![endif]-->
     {% endif %}
     {% if TOUCHICON %}
-    <link rel="apple-touch-icon" href="{{ SITEURL }}/{{ TOUCHICON }}">
+    <link rel="apple-touch-icon" href="{{ SITEURL }}/{{ TOUCHICON }}" />
     {% endif %}
 
     {% block canonical_rel %}{% endblock %}
@@ -39,16 +39,16 @@
     {% block opengraph %}
     <!-- Open Graph tags -->
         {% if OPEN_GRAPH_FB_APP_ID %}
-            <meta property="fb:app_id" content="{{ OPEN_GRAPH_FB_APP_ID }}"/>
+            <meta property="fb:app_id" content="{{ OPEN_GRAPH_FB_APP_ID }}" />
         {% endif %}
         <meta property="og:site_name" content="{{ SITENAME }}" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="{{ SITENAME }}"/>
-        <meta property="og:url" content="{{ SITEURL }}"/>
-        <meta property="og:description" content="{{ SITENAME }}"/>
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="{{ SITENAME }}" />
+        <meta property="og:url" content="{{ SITEURL }}" />
+        <meta property="og:description" content="{{ SITENAME }}" />
         {% if OPEN_GRAPH_IMAGE %}
             <meta property="og:image"
-                  content="{{ SITEURL }}/{{ OPEN_GRAPH_IMAGE }}"/>
+                  content="{{ SITEURL }}/{{ OPEN_GRAPH_IMAGE }}" />
         {% endif %}
     {% endblock %}
     {% endif %}
@@ -58,34 +58,34 @@
 
     <!-- Bootstrap -->
     {% if BOOTSTRAP_THEME %}
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.{{ BOOTSTRAP_THEME }}.min.css" type="text/css"/>
+        <link href="{{ SITEURL }}/theme/css/bootstrap.{{ BOOTSTRAP_THEME }}.min.css" rel="stylesheet" type="text/css" />
     {% else %}
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.min.css" type="text/css"/>
+        <link href="{{ SITEURL }}/theme/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     {% endif %}
-    <link href="{{ SITEURL }}/theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/theme/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
-    <link href="{{ SITEURL }}/theme/css/pygments/{{ PYGMENTS_STYLE|default('native') }}.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/theme/css/pygments/{{ PYGMENTS_STYLE|default('native') }}.css" rel="stylesheet" type="text/css" />
     {% if 'tipue_search' in PLUGINS %}
-    <link href="{{ SITEURL}}/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+    <link href="{{ SITEURL}}/theme/tipuesearch/tipuesearch.css" rel="stylesheet" type="text/css" />
     {% endif %}
     {% if DOCUTIL_CSS %}
-        <link href="{{ SITEURL }}/theme/css/html4css1.css" rel="stylesheet">
+        <link href="{{ SITEURL }}/theme/css/html4css1.css" rel="stylesheet" type="text/css" />
     {% endif %}
     {% if TYPOGRIFY %}
-        <link href="{{ SITEURL }}/theme/css/typogrify.css" rel="stylesheet">
+        <link href="{{ SITEURL }}/theme/css/typogrify.css" rel="stylesheet" type="text/css" />
     {% endif %}
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css" type="text/css"/>
+    <link href="{{ SITEURL }}/theme/css/style.css" rel="stylesheet" type="text/css" />
     {% if CUSTOM_CSS %}
-        <link href="{{ SITEURL }}/{{ CUSTOM_CSS }}" rel="stylesheet">
+        <link href="{{ SITEURL }}/{{ CUSTOM_CSS }}" rel="stylesheet" type="text/css" />
     {% endif %}
 
     {% if FEED_ALL_ATOM %}
         <link href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate"
-              title="{{ SITENAME }} ATOM Feed"/>
+              title="{{ SITENAME }} ATOM Feed" />
     {% endif %}
     {% if FEED_ALL_RSS %}
         <link href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate"
-              title="{{ SITENAME }} RSS Feed"/>
+              title="{{ SITENAME }} RSS Feed" />
     {% endif %}
 
 </head>

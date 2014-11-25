@@ -8,7 +8,7 @@ Search - {{ super() }}
     {% if 'assets' in PLUGINS %}
     {% include '_includes/minify_tipuesearch.html' with context %}
     {% else %}
-    <link href="{{ SITEURL }}/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/theme/tipuesearch/tipuesearch.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch_set.js"></script>
     <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch.min.js"></script>
     {% endif %}
