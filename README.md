@@ -47,7 +47,7 @@ Part of the versatility of this theme comes from the fact that I included all th
 
 ### Article info
 
-Set `SHOW_ARTICLE_AUTHOR` to True to show the author of the article at the top of the article and in the index of articles. Set `SHOW_ARTICLE_CATEGORY` to show the Category of each article.
+Set `SHOW_ARTICLE_AUTHOR` to True to show the author of the article at the top of the article and in the index of articles. Set `SHOW_ARTICLE_CATEGORY` to show the Category of each article. Set `SHOW_DATE_MODIFIED` to True to show the article modified date next to the published date.
 
 ### Custom CSS
 
