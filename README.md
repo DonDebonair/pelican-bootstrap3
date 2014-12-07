@@ -234,6 +234,22 @@ You can enable sharing buttons through [AddThis](http://www.addthis.com/) by set
 * AddThis automatically adds a short hashtag to the end of your URLs. This lets you reveal how often visitors copy your URL from their address bar to share. Example of URL: `http://domain.com/page.html#UF0983`. This function can be disabled by setting `ADDTHIS_DATA_TRACK_ADDRESSBAR` to _False_.
 * All social buttons are enabled by default. You can disable certain button by setting following properties to _False_: `ADDTHIS_FACEBOOK_LIKE`, `ADDTHIS_TWEET`, `ADDTHIS_GOOGLE_PLUSONE`.
 
+### Really Responsive Social Media Buttons
+
+[RRSSB](http://kurtnoble.com/labs/rrssb/) is an alternative set of sharing buttons from @dbox and @seagoat that can be enabled by setting `RRSSB` to True. It is not recommended to enable *both* AddThis and RRSSB. Each button is enabled individually by setting it to True:
+* RRSSB_EMAIL
+* RRSSB_FACEBOOK
+* RRSSB_GITHUB
+* RRSSB_GOOGLEPLUS
+* RRSSB_LINKEDIN
+* RRSSB_PINTEREST
+* RRSSB_POCKET
+* RRSSB_REDDIT
+* RRSSB_TUMBLR
+* RRSSB_TWITTER
+
+`RRSSB_GITHUB` requires `GITHUB_USER` to also be set. Although `RRSSB_TWITTER` does not require `TWITTER_USERNAME` to be set, doing so will allow shares to @mention you.
+
 ### Tipue Search
 
 This theme has support for the

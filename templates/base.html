@@ -56,6 +56,11 @@
     {# Twitter Cards tags #}
     {% include 'includes/twitter_cards.html' %}
 
+    {# RRSSB #}
+    {% if RRSSB %}
+      <link rel="stylesheet" href="{{ SITEURL }}/theme/css/rrssb.css" />
+    {% endif %}
+
     <!-- Bootstrap -->
     {% if BOOTSTRAP_THEME %}
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.{{ BOOTSTRAP_THEME }}.min.css" type="text/css"/>
@@ -182,6 +187,11 @@
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
 <script src="{{ SITEURL }}/theme/js/respond.min.js"></script>
+
+{# RRSSB #}
+{% if RRSSB %}
+  <script src="{{ SITEURL }}/theme/js/rrssb.min.js"></script>
+{% endif %}
 
 {% if BANNER %}
     <script src="{{ SITEURL }}/theme/js/bodypadding.js"></script>
