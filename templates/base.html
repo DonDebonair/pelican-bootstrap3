@@ -139,13 +139,15 @@
         <!-- /.navbar-collapse -->
     </div>
 </div> <!-- /.navbar -->
-<!-- Banner -->
-{% if BANNER and BANNER_ALL_PAGES %}
-    {% include 'includes/banner.html' %}
-{% elif BANNER and not BANNER_ALL_PAGES %}
-    {% block banner %}{% endblock %}
-{% endif %}
-<!-- End Banner -->
+{% block banner %}
+	<!-- Banner -->
+	{% if BANNER and BANNER_ALL_PAGES %}
+		{% include 'includes/banner.html' %}
+	{% elif BANNER and not BANNER_ALL_PAGES %}
+		<!-- No Banner -->
+	{% endif %}
+	<!-- End Banner -->
+{% endblock %}
 <div class="container">
     <div class="row">
         {% if not HIDE_SIDEBAR or ABOUT_ME %}
