@@ -56,6 +56,10 @@
     {# Twitter Cards tags #}
     {% include 'includes/twitter_cards.html' %}
 
+    {% if MANIFEST %}
+    <link rel="manifest" href="{{ MANIFEST }}">
+    {% endif %}
+
     <!-- Bootstrap -->
     {% if BOOTSTRAP_THEME %}
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.{{ BOOTSTRAP_THEME }}.min.css" type="text/css"/>

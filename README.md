@@ -245,6 +245,10 @@ All you have to do, is:
 - Add `DIRECT_TEMPLATES = (('search',))` in your `pelicanconf.py`.
 
 
+### WebApp Manifest-Support
+
+This theme supports linking to a [App-Manifest](http://updates.html5rocks.com/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android). Create the file similiar to the custom.css file, than reference it's output path in `MANIFEST` like `MANIFEST = '/static/manifest.json'`
+
 ### Footer
 
 The footer will display a copyright message using the AUTHOR variable and the year of the latest post. If a content license mark is enabled (see above), that will be shown as well. 
