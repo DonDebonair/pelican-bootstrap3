@@ -127,6 +127,10 @@ This theme supports including IPython notebooks through the [Liquid Tags plugin]
 
 Set the `FAVICON` option in your `pelicanconf.py`. For example: `FAVICON = 'images/favicon.png'`
 
+### Theme-Color for Chrome v39+ on Android Lollipop
+
+Set the `THEMECOLOR` option in your `pelicanconf.py`. For example: `THEMECOLOR = '#4B088A'`
+
 ### Index page
 
 * If `DISPLAY_ARTICLE_INFO_ON_INDEX` is set to _True_, article info (date, tags) will be show under the title for each article, otherwise only title and summary will be shown (default). 
