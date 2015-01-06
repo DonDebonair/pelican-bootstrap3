@@ -45,11 +45,9 @@ It uses the `tag_cloud` variable for displaying tags in the sidebar. You can con
 
 Part of the versatility of this theme comes from the fact that I included all the lovely Bootstrap 3 themes from [Bootswatch](http://bootswatch.com/), built by [Thomas Park](https://github.com/thomaspark). You can tell Pelican what Bootswatch theme to use, by setting `BOOTSTRAP_THEME` to the desired theme, in lowercase (ie. 'readable' or 'cosmo' etc.). My own site is using _Simplex_. If you want to use any other Bootstrap 3 compatible theme, just put the minified CSS in the `static/css` directory and rename it using the following naming scheme: `bootstrap.{theme-name}.min.css`. Then update the `BOOTSTRAP_THEME` variable with the _theme-name_ used.
 
-#### Update: Readable has seen some major changes. I added the new version as 'readable' and renamed the old version to 'readable-old'. Update your config accordingly.
-
 ### Article info
 
-Set `SHOW_ARTICLE_AUTHOR` to True to show the author of the article at the top of the article and in the index of articles. Set `SHOW_ARTICLE_CATEGORY` to show the Category of each article.
+Set `SHOW_ARTICLE_AUTHOR` to True to show the author of the article at the top of the article and in the index of articles. Set `SHOW_ARTICLE_CATEGORY` to show the Category of each article. Set `SHOW_DATE_MODIFIED` to True to show the article modified date next to the published date.
 
 ### Custom CSS
 
@@ -149,6 +147,14 @@ You can show a short blurb of text about yourself and a picture. The following t
 * Your 'About Me' paragraph will be whatever the `ABOUT_ME` variable is set to (raw html is allowed)
 * Your avatar can be set by pointing the `AVATAR` variable to the relevant picture (e.g. 'images/profile.png')
 
+### Banner Image
+
+A banner image can be added to the theme, displayed with the SITENAME and an optional subtitle. Config options are as follows:
+
+* Set the banner image with `BANNER = '/path/to/banner.png'`
+* Set the subtitle text with `BANNER_SUBTITLE = 'This is my subtitle'`
+* By default, the banner is only shown on the index page. To display the banner on all pages, set `BANNER_ALL_PAGES = True`
+
 ### Sidebar options
 
 The following things can be displayed on the sidebar:
@@ -227,6 +233,17 @@ You can enable sharing buttons through [AddThis](http://www.addthis.com/) by set
 
 * AddThis automatically adds a short hashtag to the end of your URLs. This lets you reveal how often visitors copy your URL from their address bar to share. Example of URL: `http://domain.com/page.html#UF0983`. This function can be disabled by setting `ADDTHIS_DATA_TRACK_ADDRESSBAR` to _False_.
 * All social buttons are enabled by default. You can disable certain button by setting following properties to _False_: `ADDTHIS_FACEBOOK_LIKE`, `ADDTHIS_TWEET`, `ADDTHIS_GOOGLE_PLUSONE`.
+
+### Tipue Search
+
+This theme has support for the
+[Tipue Search plugin](https://github.com/getpelican/pelican-plugins/tree/master/tipue_search).
+
+All you have to do, is:
+- enable the plugin, and the theme will add a search box on the right
+  side of the menu
+- Add `DIRECT_TEMPLATES = (('search',))` in your `pelicanconf.py`.
+
 
 ### Footer
 
