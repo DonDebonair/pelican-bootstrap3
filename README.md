@@ -101,6 +101,10 @@ For a demo of the different Pygment styles, have a look [here](http://pygments.o
 
 Pelican-Bootstrap3 follows the standard Pagination settings of Pelican and uses the Bootstrap3 [Pagination component](http://getbootstrap.com/components/#pagination), but you can optionally use the Boostrap3 _Pager_ by setting `USE_PAGER` to `True`.
 
+### Bootstrap fluid layout
+
+If you'd like to use the fluid container layout from Bootstrap, set the flag `BOOTSTRAP_FLUID` to _True_.
+
 ### Site Brand
 
 You can provide a logo for your site using `SITELOGO`. For example: `SITELOGO = 'images/my_site_logo.png'`. You can then define the size of the logo using `SITELOGO_SIZE`. The `width` of the `<img>` element will be set accordingly.

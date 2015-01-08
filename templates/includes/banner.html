@@ -5,7 +5,7 @@
 </style>
 
 <div id="banner">
-	<div class="container">
+	<div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
 		<div class="copy">
 			<h1>{{ SITENAME }}</h1>
 			{% if BANNER_SUBTITLE %}
