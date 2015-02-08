@@ -192,5 +192,12 @@
 {% include 'includes/piwik.html' %}
 
 {% block scripts %}{% endblock %}
+{% if ADDTHIS_PROFILE %}
+     {% if ADDTHIS_DATA_TRACK_ADDRESSBAR|default(true) %}
+         <script type="text/javascript">var addthis_config = {"data_track_addressbar": true};</script>
+     {% endif %}
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ ADDTHIS_PROFILE }}"></script>
+{% endif %}
+
 </body>
 </html>
