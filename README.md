@@ -202,6 +202,11 @@ You can optionally declare a [Creative Commons license](http://creativecommons.o
 
 The license choice mirrors the [Creative Commons License Chooser](http://creativecommons.org/choose/). Source for the macro that renders the mark is at http://github.com/hlapp/cc-tools.
 
+### Sorted pages
+
+The pages in the header row can be sorted by giving them a `SortOrder` attribute.
+
+
 ### GitHub
 
 The theme can show your most recently active GitHub repos in the sidebar. To enable, provide a `GITHUB_USER`. Appearance and behaviour can be controlled using the following variables:
