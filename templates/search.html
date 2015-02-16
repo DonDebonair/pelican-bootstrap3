@@ -6,7 +6,7 @@ Search - {{ super() }}
 
 {% block scripts %}
     {% if 'assets' in PLUGINS %}
-    {% include '_includes/minify_tipuesearch.html' with context %}
+    {% include 'includes/minify_tipuesearch.html' with context %}
     {% else %}
     <link href="{{ SITEURL }}/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
     <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch_set.js"></script>
