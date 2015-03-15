@@ -57,12 +57,23 @@
     {% include 'includes/twitter_cards.html' %}
 
     <!-- Bootstrap -->
-    {% if BOOTSTRAP_THEME %}
+    {% if USE_LOCAL_ASSETS %}  <!-- Use local assets only -->   
+      {% if BOOTSTRAP_THEME %}
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.{{ BOOTSTRAP_THEME }}.min.css" type="text/css"/>
-    {% else %}
+      {% else %}
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.min.css" type="text/css"/>
+      {% endif %}
+      <link href="{{ SITEURL }}/theme/css/font-awesome.min.css" rel="stylesheet">
+    {% else %} <!-- Use CDN instead, by default -->
+      {% if BOOTSTRAP_THEME %}        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.1.0/css/{{ BOOTSTRAP_THEME }}/bootstrap.min.css" type="text/css"/>
+      {% else %}
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js" type="text/css"/>
+
+      {% endif %}
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     {% endif %}
-    <link href="{{ SITEURL }}/theme/css/font-awesome.min.css" rel="stylesheet">
+
 
     <link href="{{ SITEURL }}/theme/css/pygments/{{ PYGMENTS_STYLE|default('native') }}.css" rel="stylesheet">
     {% if 'tipue_search' in PLUGINS %}
@@ -178,13 +189,49 @@
 </div>
 {% include 'includes/footer.html' %}
 
-<script src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
+{% if USE_LOCAL_ASSETS %} <!-- Only use local assets -->
+  <script src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
+  <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+  <script src="{{ SITEURL }}/theme/js/respond.min.js"></script>
+{% else %} <!-- Use CDN instead, fallback if necessary -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+  <script type="text/javascript">//<![CDATA[   
+   /* jquery fallback */
+   (window.jQuery) || document.write('<script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery.min.js">\x3C/script>');
+   //]]>  </script>
+  <script type="text/javascript">//<![CDATA[   
+   /* bootstrap fallback */
+   if(typeof($.fn.modal) === 'undefined') { 
+     document.write('<script src="{{ SITEURL }}/theme/js/bootstrap.min.js">\x3C/script>'); 
+     {% if BOOTSTRAP_THEME %}
+     $("head").append('<link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.{{ BOOTSTRAP_THEME }}.min.css" type="text/css" />'); 
+     {% else %}
+     $("head").append('<link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.min.css" type="text/css" />'); 
+     {% endif %}
+   } //]]>  </script>
+  <script type="text/javascript">//<![CDATA[   
+   /* respond.js fallback */
+   window.respond || document.write('<script type="text/javascript" src="{{ SITEURL }}/theme/js/respond.min.js">\x3C/script>')
+   /* font-awesome fallback */
+   $(window).load(function() {
+     (function($){
+       var $item = $('.fa').first();
+       if ($item.css('fontFamily') !== 'FontAwesome' ) {
+	 $('head').append('<link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.min.css">');
+       }
+     })(jQuery);//]]>
+   });   //]]>  </script>
+{% endif %}
+ 
 
-<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="{{ SITEURL }}/theme/js/respond.min.js"></script>
+<script type='text/javascript'>//<![CDATA[
+
+</script>
 
 {% if BANNER %}
     <script src="{{ SITEURL }}/theme/js/bodypadding.js"></script>
