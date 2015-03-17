@@ -1,0 +1,17 @@
+{% if CODERWALL_USER %}
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $.getJSON("http://coderwall.com/{{ CODERWALL_USER }}.json?callback=?", function(data){
+            for(var i = 0; i < data.data.badges.length ; i++){
+                var badge = data.data.badges[i];
+                var badge_tag = $("<img />");
+                badge_tag.attr("src", badge.badge);
+                badge_tag.attr("title", badge.description);
+                badge_tag.attr("alt", badge.name);
+                badge_tag.css("width","25%");
+                $("#coderwall_badges").append(badge_tag);
+            }
+        });
+    });
+    </script>
+{% endif %}
