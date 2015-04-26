@@ -91,6 +91,10 @@
               title="{{ SITENAME }} RSS Feed"/>
     {% endif %}
 
+
+    {% block dynamic_css %}{% endblock %}
+
+
 </head>
 <body>
 
@@ -195,5 +199,7 @@
 {% include 'includes/piwik.html' %}
 
 {% block scripts %}{% endblock %}
+
+
 </body>
 </html>

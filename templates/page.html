@@ -44,6 +44,16 @@
     {% endif %}
 {% endblock %}
 
+
+{% block dynamic_css %}
+    {% if page.styles %}
+        {% for style in page.styles %}
+            {{ style }}
+        {% endfor %}
+    {% endif %}
+{% endblock %}
+
+
 {% block content %}
     <section id="content" class="body">
         <h1 class="entry-title">{{ page.title }}</h1>
@@ -61,4 +71,14 @@
             {% endif %}
         </div>
     </section>
+
 {% endblock %}
+
+
+{% block scripts %}
+    {% if page.scripts %}
+        {% for script in page.scripts %}
+            {{ script }}
+        {% endfor %}
+    {% endif %}
+{% endblock%}
