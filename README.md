@@ -205,7 +205,8 @@ The license choice mirrors the [Creative Commons License Chooser](http://creativ
 Alternatively, if you want to use another license type, you can use instead the `CUSTOM_LICENSE` property to set a license string that will be added at the bottom of every page.
 Raw HTML is allowed.
 As `CC_*` variables take precedence, be sure to avoid `CC_*` variables when using `CUSTOM_LICENSE`.
-By example, if you want to use the WTFPL license, yuo can set:
+
+By example, if you want to use the WTFPL license, you can set:
 `CUSTOM_LICENSE='Unless otherwise stated, all articles are published under the <a href="http://www.wtfpl.net/about/">WTFPL</a> license.'`
 
 ### GitHub
