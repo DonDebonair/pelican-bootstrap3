@@ -91,6 +91,10 @@
               title="{{ SITENAME }} RSS Feed"/>
     {% endif %}
 
+
+    {% block dynamic_css %}{% endblock %}
+
+
 </head>
 <body>
 
@@ -114,11 +118,11 @@
                     <li><a href="{{ link }}">{{ title }}</a></li>
                 {% endfor %}
                 {% if DISPLAY_PAGES_ON_MENU %}
-                    {% for p in PAGES %}
-                         <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">
-                             {{ p.menulabel|default(p.title) }}
-                          </a></li>
-                      {% endfor %}
+                    {% for p in PAGES|sort(attribute='sortorder') %}
+                        <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">
+                            {{ p.menulabel|default(p.title) }}
+                        </a></li>
+                    {% endfor %}
                 {% endif %}
                 {% if DISPLAY_CATEGORIES_ON_MENU %}
                     {% for cat, null in categories %}
@@ -195,5 +199,7 @@
 {% include 'includes/piwik.html' %}
 
 {% block scripts %}{% endblock %}
+
+
 </body>
 </html>

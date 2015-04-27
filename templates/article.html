@@ -50,6 +50,17 @@
 <link rel="canonical" href="{{ SITEURL }}/{{ article.url }}">
 {% endblock %}
 
+
+{% block dynamic_css %}
+    {% if article.styles %}
+        {% for style in article.styles %}
+            {{ style }}
+        {% endfor %}
+    {% endif %}
+{% endblock %}
+
+
+
 {% block breadcrumbs %}
     {% if DISPLAY_BREADCRUMBS %}
         {% if DISPLAY_CATEGORY_IN_BREADCRUMBS %}
@@ -98,6 +109,13 @@
 {% endblock %}
 
 {% block scripts %}
+
+{% if article.scripts %}
+    {% for script in article.scripts %}
+        {{ script }}
+    {% endfor %}
+{% endif %}
+
 {% if ADDTHIS_PROFILE %}
     {% if ADDTHIS_DATA_TRACK_ADDRESSBAR|default(true) %}
         <script type="text/javascript">var addthis_config = {"data_track_addressbar": true};</script>
@@ -109,3 +127,4 @@
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/shariff.min.js"></script>
 {% endif %}
 {% endblock %}
+
