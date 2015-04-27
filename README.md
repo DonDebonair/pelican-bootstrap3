@@ -202,6 +202,13 @@ You can optionally declare a [Creative Commons license](http://creativecommons.o
 
 The license choice mirrors the [Creative Commons License Chooser](http://creativecommons.org/choose/). Source for the macro that renders the mark is at http://github.com/hlapp/cc-tools.
 
+Alternatively, if you want to use another license type, you can use instead the `CUSTOM_LICENSE` property to set a license string that will be added at the bottom of every page.
+Raw HTML is allowed.
+As `CC_*` variables take precedence, be sure to avoid `CC_*` variables when using `CUSTOM_LICENSE`.
+
+By example, if you want to use the WTFPL license, you can set:
+`CUSTOM_LICENSE='Unless otherwise stated, all articles are published under the <a href="http://www.wtfpl.net/about/">WTFPL</a> license.'`
+
 ### GitHub
 
 The theme can show your most recently active GitHub repos in the sidebar. To enable, provide a `GITHUB_USER`. Appearance and behaviour can be controlled using the following variables:
