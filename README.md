@@ -1,6 +1,6 @@
 # pelican-bootstrap3
 
-This is a Bootstrap 3 theme for Pelican. It's fully responsive. Pelican-bootrap3 is compatible with Pelican 3.3.0 and 
+This is a Bootstrap 3 theme for Pelican. It's fully responsive. Pelican-bootstrap3 is compatible with Pelican 3.3.0 and 
 higher. I will try to regularly update this theme with new features and newer versions of Bootstrap & Bootswatch.
 
 ## CONTRIBUTING
