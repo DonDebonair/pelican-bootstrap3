@@ -139,7 +139,7 @@
             <ul class="nav navbar-nav navbar-right">
             {% if 'tipue_search' in PLUGINS %}
               <li><span>
-                <form class="navbar-search" action="/search">
+                <form class="navbar-search" action="{{ SEARCH_URL | default('/search.html') }}">
                   <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
                 </form></span>
               </li>
@@ -166,7 +166,6 @@
         {% endif %}
         {% block breadcrumbs %}
         {% endblock %}
-
         {% block content %}
         {% endblock %}
         </div>
