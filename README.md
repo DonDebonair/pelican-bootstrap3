@@ -288,8 +288,7 @@ The footer will display a copyright message using the AUTHOR variable and the ye
 
 Include a series of images in the sidebar.
 
-SIDEBAR_IMAGES = (("/path/to/image1.png"),
-    ("/path/to/image2.png"),)
+SIDEBAR_IMAGES = ["/path/to/image1.png", "/path/to/image2.png"]
 
 ## Live example
 
