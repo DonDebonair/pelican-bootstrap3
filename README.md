@@ -186,6 +186,7 @@ The first string in each item will be used for both the name as shown in the sid
 icon to show. You can provide an alternative icon string as the third string (as shown in the _stackoverflow_ item).
 * **Tags** will be shown if `DISPLAY_TAGS_ON_SIDEBAR` is set to _True_. Normally, tags are shown as a list.
 	* Set `DISPLAY_TAGS_INLINE` to _True_, to display the tags inline (ie. as tagcloud)
+	* Set `TAGS_URL` to the relative URL of the tags index page (typically `tags.html`)
 * **Categories** will be shown if `DISPLAY_CATEGORIES_ON_SIDEBAR` is set to _True_
 * **Recent Posts** will be shown if `DISPLAY_RECENT_POSTS_ON_SIDEBAR` is set to _True_
 	* Use `RECENT_POST_COUNT` to control the amount of recent posts. Defaults to **5**
