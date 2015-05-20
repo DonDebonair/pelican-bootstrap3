@@ -284,6 +284,13 @@ All you have to do, is:
 
 The footer will display a copyright message using the AUTHOR variable and the year of the latest post. If a content license mark is enabled (see above), that will be shown as well.
 
+### Sidebar Images
+
+Include a series of images in the sidebar.
+
+SIDEBAR_IMAGES = (("/path/to/image1.png"),
+    ("/path/to/image2.png"),)
+
 ## Live example
 
 [This is my website](http://dandydev.net)
