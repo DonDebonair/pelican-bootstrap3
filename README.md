@@ -192,7 +192,7 @@ icon to show. You can provide an alternative icon string as the third string (as
 	* Use `RECENT_POST_COUNT` to control the amount of recent posts. Defaults to **5**
 
 * **Sidebar Images** allows you to add a series of images to your sidebar, with an optional header / title.
-    * In your pelicanconf.py, add the following:
+    * In your `pelicanconf.py`, add the following:
 
 ```
 SIDEBAR_IMAGES = ['/path/to/image1.png', '/path/to/image2.png']
