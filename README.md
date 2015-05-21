@@ -200,7 +200,7 @@ SIDEBAR_IMAGES_HEADER = 'My Sidebar Images'
 ```
 Example:
 
-![](Sample_Sidebar_Images.png)
+![](sidebar-images-example.png)
 
 To remove the sidebar entirely, set `HIDE_SIDEBAR` to _True_.
 
