@@ -198,6 +198,9 @@ icon to show. You can provide an alternative icon string as the third string (as
 SIDEBAR_IMAGES = ['/path/to/image1.png', '/path/to/image2.png']
 SIDEBAR_IMAGES_HEADER = 'My Sidebar Images'
 ```
+    * Example:
+
+    ![Sample Sidebar Images](Sample_Sidebar_Images.png)
 
 To remove the sidebar entirely, set `HIDE_SIDEBAR` to _True_.
 
