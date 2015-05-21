@@ -191,6 +191,14 @@ icon to show. You can provide an alternative icon string as the third string (as
 * **Recent Posts** will be shown if `DISPLAY_RECENT_POSTS_ON_SIDEBAR` is set to _True_
 	* Use `RECENT_POST_COUNT` to control the amount of recent posts. Defaults to **5**
 
+* **Sidebar Images** allows you to add a series of images to your sidebar, with an optional header / title.
+    * In your pelicanconf.py, add the following:
+
+```
+SIDEBAR_IMAGES = ['/path/to/image1.png', '/path/to/image2.png']
+SIDEBAR_IMAGES_HEADER = 'My Sidebar Images'
+```
+
 To remove the sidebar entirely, set `HIDE_SIDEBAR` to _True_.
 
 ### reStructuredText styles
@@ -289,12 +297,6 @@ setting, which comes in handy if you have fancy rewrite rules in your Apache or 
 ### Footer
 
 The footer will display a copyright message using the AUTHOR variable and the year of the latest post. If a content license mark is enabled (see above), that will be shown as well.
-
-### Sidebar Images
-
-Include a series of images in the sidebar.
-
-SIDEBAR_IMAGES = ["/path/to/image1.png", "/path/to/image2.png"]
 
 ## Live example
 
