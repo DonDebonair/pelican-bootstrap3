@@ -252,6 +252,8 @@ To get a `TWITTER_WIDGET_ID`, go to: https://twitter.com/settings/widgets and se
 
 `https://twitter.com/settings/widgets/TWITTER_WIDGET_ID/edit`
 
+To limit tweets count in the timeline, set `TWEET_LIMIT` to the count(integer).
+
 ### AddThis
 
 You can enable sharing buttons through [AddThis](http://www.addthis.com/) by setting `ADDTHIS_PROFILE` to your AddThis profile-id. This will display a **Tweet**, **Facebook Like** and **Google +1** button under each post.
