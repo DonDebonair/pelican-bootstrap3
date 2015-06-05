@@ -167,7 +167,7 @@ A banner image can be added to the theme, displayed with the SITENAME or BANNER_
 
 * Set the banner image with `BANNER = '/path/to/banner.png'`
 * Set the subtitle text with `BANNER_SUBTITLE = 'This is my subtitle'`
-* Set the title text with `BANNER_TITLE`, it replace the `SITENAME`
+* Set the title text with `BANNER_TITLE = 'This is my title'`, it replace the `SITENAME`
 * By default, the banner is only shown on the index page. To display the banner on all pages, set `BANNER_ALL_PAGES = True`
 
 ### Sidebar options
