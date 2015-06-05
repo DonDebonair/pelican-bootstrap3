@@ -1,6 +1,6 @@
 # pelican-bootstrap3
 
-This is a Bootstrap 3 theme for Pelican. It's fully responsive. Pelican-bootstrap3 is compatible with Pelican 3.3.0 and 
+This is a Bootstrap 3 theme for Pelican. It's fully responsive. Pelican-bootstrap3 is compatible with Pelican 3.3.0 and
 higher. I will try to regularly update this theme with new features and newer versions of Bootstrap & Bootswatch.
 
 ## CONTRIBUTING
@@ -163,10 +163,11 @@ You can show a short blurb of text about yourself and a picture. The following t
 
 ### Banner Image
 
-A banner image can be added to the theme, displayed with the SITENAME and an optional subtitle. Config options are as follows:
+A banner image can be added to the theme, displayed with the SITENAME or BANNER_TITLE and an optional subtitle. Config options are as follows:
 
 * Set the banner image with `BANNER = '/path/to/banner.png'`
 * Set the subtitle text with `BANNER_SUBTITLE = 'This is my subtitle'`
+* Set the title text with `BANNER_TITLE`, it replace the SITENAME
 * By default, the banner is only shown on the index page. To display the banner on all pages, set `BANNER_ALL_PAGES = True`
 
 ### Sidebar options
@@ -283,7 +284,7 @@ All you have to do, is:
 - enable the plugin, and the theme will add a search box on the right
   side of the menu
 - Add `'search'` to the `DIRECT_TEMPLATES` in your `pelicanconf.py`. E.g. `DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search').
-By default, the Tipue search page is configured at "/search.html", but you can override that with the `SEARCH_URL` 
+By default, the Tipue search page is configured at "/search.html", but you can override that with the `SEARCH_URL`
 setting, which comes in handy if you have fancy rewrite rules in your Apache or Nginx configuration.
 
 ### Footer
@@ -307,5 +308,3 @@ If you want more examples of what you could do with this theme, have a [look her
 ![](screenshot.png)
 
 ![](screenshot-article.png)
-
-
