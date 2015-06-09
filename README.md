@@ -30,7 +30,10 @@ This theme honors the following standard Pelican settings:
 	* `DISPLAY_PAGES_ON_MENU`
 	* `DISPLAY_CATEGORIES_ON_MENU`
 	* `MENUITEMS`
-	* `LINKS` (Blogroll will be put in the sidebar instead of the head)
+  * `DROPDOWNITEMS` 
+    - You may customize the header of this dropdown items, by setting the 
+    `DROPDOWN_TEXT` variable
+  * `LINKS` (Blogroll will be put in the sidebar instead of the head)
 * Analytics & Comments
 	* `GOOGLE_ANALYTICS` (classic tracking code)
 	* `GOOGLE_ANALYTICS_UNIVERSAL` and `GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY` (Universal tracking code)
