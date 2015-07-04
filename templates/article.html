@@ -99,6 +99,11 @@
 {% endblock %}
 
 {% block scripts %}
+{% if ZOOMIMG|default(false) %}
+    <!-- (https://github.com/jackmoore/zoom) -->
+    <script src="{{ SITEURL }}/{{THEME_STATIC_DIR}}/js/jquery.zoom.min.js"></script>
+    <script src="{{ SITEURL }}/{{THEME_STATIC_DIR}}/js/zoom.js"></script>
+{% endif %}
 {% if ADDTHIS_PROFILE %}
     {% if ADDTHIS_DATA_TRACK_ADDRESSBAR|default(true) %}
         <script type="text/javascript">var addthis_config = {"data_track_addressbar": true};</script>
