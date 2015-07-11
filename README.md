@@ -39,6 +39,8 @@ This theme honors the following standard Pelican settings:
 
 It uses the `tag_cloud` variable for displaying tags in the sidebar. You can control the amount of tags shown with: `TAG_CLOUD_MAX_ITEMS`
 
+From Pelican 3.6.0, note that you need to install a separate [plugin](https://github.com/getpelican/pelican/blob/3a03aef3e24d23c223bb7ea31f31d83b8a8ac1cf/docs/faq.rst#my-tag-cloud-is-missingbroken-since-i-upgraded-pelican) to generate `tag cloud`. 
+
 ## Extras
 
 ### Bootswatch and other Bootstrap 3 themes
