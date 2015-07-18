@@ -78,6 +78,7 @@ If you want to enable Material Design, add in pelicanconf.py.
 ```
 MATERIAL_DESIGN = True
 ```
+Adapted from @FezVrasta work https://github.com//bootstrap-material-design.
 
 ### Pygments
 
