@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 400;
+  src: local('RobotoDraft'), local('RobotoDraft-Regular'), local('Roboto-Regular'), url(../../fonts/material/RobotoDraftRegular.woff2) format('woff2'), url(../../fonts/material/RobotoDraftRegular.woff) format('woff');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 500;
+  src: local('RobotoDraft Medium'), local('RobotoDraft-Medium'), local('Roboto-Medium'), url(../../fonts/material/RobotoDraftMedium.woff2) format('woff2'), url(../../fonts/material/RobotoDraftMedium.woff) format('woff');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 700;
+  src: local('RobotoDraft Bold'), local('RobotoDraft-Bold'), local('Roboto-Bold'), url(../../fonts/material/RobotoDraftBold.woff2) format('woff2'), url(../../fonts/material/RobotoDraftBold.woff) format('woff');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: italic;
+  font-weight: 400;
+  src: local('RobotoDraft Italic'), local('RobotoDraft-Italic'), local('Roboto-Italic'), url(../../fonts/material/RobotoDraftItalic.woff2) format('woff2'), url(../../fonts/material/RobotoDraftItalic.woff) format('woff');
+}
+/*# sourceMappingURL=roboto.css.map */
