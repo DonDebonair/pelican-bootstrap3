@@ -145,7 +145,7 @@ init_mathjax = function() {
                 inlineMath: [ ['$','$'], ["\\(","\\)"] ],
                 displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
             },
-            displayAlign: 'left', // Change this to 'center' to center equations.
+            displayAlign: {{ '\'center\'' if NOTEBOOK_MATH_CENTER else '\'left\'' }},
             "HTML-CSS": {
                 styles: {'.MathJax_Display': {"margin": 0}}
             }

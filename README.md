@@ -135,7 +135,7 @@ You may display information on the series just under the article title setting `
 
 ### IPython Notebook support
 
-This theme supports including IPython notebooks through the [Liquid Tags plugin](https://github.com/getpelican/pelican-plugins/tree/master/liquid_tags). If you enable the plugin, the theme will automatically include the right CSS/JS to make the notebooks work.
+This theme supports including IPython notebooks through the [Liquid Tags plugin](https://github.com/getpelican/pelican-plugins/tree/master/liquid_tags). If you enable the plugin, the theme will automatically include the right CSS/JS to make the notebooks work. Set `NOTEBOOK_MATH_CENTER` to `True` to center math equations.
 
 ### Favicon
 
