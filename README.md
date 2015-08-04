@@ -274,6 +274,13 @@ As an alternative, you may use [Shariff](https://github.com/heiseonline/shariff)
 
 For a detailed description of each setting, refer to [data attributes](https://github.com/heiseonline/shariff#options-data-attributes) description at the [Shariff README](https://github.com/heiseonline/shariff).
 
+### Cookie Consent (EU Cookie Law)
+
+Since 2011 websites based in the EU are required to ask visitors for consent to use web cookies. This is especially
+relevant if you are using analytik tools like Piwik or Google Analytics. This feature uses [Cookie Consent](https://silktide.com/tools/cookie-consent/) by silktide.
+
+To activate a banner that is shown to your visitors set `COOKIECONSENT` to `True`. You can optionally provide `COOKIECONSENT_TEXT` that will be used as main text of the banner. `COOKIECONSENT_MORE_INFO_URL` points to a dedicated Privacy/Cookie Policy labelled with `COOKIECONSENT_MORE_INFO`. The confirmation button is labelled with `COOKIECONSENT_DISMISS`. The theme can be chosen by setting `COOKIECONSENT_THEME` (defaults to `dark-top`). Available themes can be found in `static/css/cookieconsent2/`.
+
 ### Tipue Search
 
 This theme has support for the
