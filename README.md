@@ -277,7 +277,7 @@ For a detailed description of each setting, refer to [data attributes](https://g
 ### Cookie Consent (EU Cookie Law)
 
 Since 2011 websites based in the EU are required to ask visitors for consent to use web cookies. This is especially
-relevant if you are using analytik tools like Piwik or Google Analytics. This feature uses [Cookie Consent](https://silktide.com/tools/cookie-consent/) by silktide.
+relevant if you are using web analytics like Piwik or Google Analytics. This feature uses [Cookie Consent](https://silktide.com/tools/cookie-consent/) by silktide.
 
 To activate a banner that is shown to your visitors set `COOKIECONSENT` to `True`. You can optionally provide `COOKIECONSENT_TEXT` that will be used as main text of the banner. `COOKIECONSENT_MORE_INFO_URL` points to a dedicated Privacy/Cookie Policy labelled with `COOKIECONSENT_MORE_INFO`. The confirmation button is labelled with `COOKIECONSENT_DISMISS`. The theme can be chosen by setting `COOKIECONSENT_THEME` (defaults to `dark-top`). Available themes can be found in `static/css/cookieconsent2/`.
 
