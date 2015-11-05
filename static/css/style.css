@@ -12,7 +12,7 @@ body {
 }
 
 /* for list-group-items nested within a list-group-item, reset the bottom
-   padding of the last item, b/c the containing item has paddimg already 
+   padding of the last item, b/c the containing item has paddimg already
  */
 .list-group-item .list-group-item:last-child {
     padding-bottom: 0px;
@@ -47,6 +47,14 @@ body {
     padding-bottom: 5px;
     -ms-word-break: normal;
     word-break: normal;
+}
+
+#aboutme img {
+    width: 100%;
+}
+
+#sidebar-images img {
+  width: 100%;
 }
 
 #sidebar {
@@ -175,7 +183,7 @@ figure.floatcenter, .align-center {
     background-repeat: no-repeat;
     background-position: top center;
     background-attachment: scroll;
-    background-size: cover; 
+    background-size: cover;
     background-color: #C4C4C4;
     margin: 0 0 20px;
     padding: 70px 0; /*controls padding around inner text*/
