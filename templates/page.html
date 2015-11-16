@@ -62,3 +62,24 @@
         </div>
     </section>
 {% endblock %}
+
+{% block scripts %}
+<!-- pelican_dynamic scripts -->
+{% if 'pelican_dynamic' in PLUGINS %}
+   {% if page.scripts %}
+       {% for script in page.scripts %}
+{{ script }}
+       {% endfor %}
+   {% endif %}
+ {% endif %}
+{% endblock %}
+
+{% block dynamic_style %}
+   {% if 'pelican_dynamic' in PLUGINS %}
+     {% if page.styles %}
+       {% for style in page.styles %}
+       {{ style }}
+       {% endfor %}
+     {% endif %}
+   {% endif %}
+{% endblock %}
