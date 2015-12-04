@@ -2,7 +2,9 @@
 {% block title %}{{ article.title|striptags }} - {{ SITENAME }}{% endblock %}
 {% block html_lang %}{{ article.lang }}{% endblock %}
 {% block meta %}
-    {% if article.author %}
+    {% if article.authors %}
+        <meta name="author" content="{{ article.authors | join(', ') }}" />
+    {% elif article.author %}
         <meta name="author" content="{{ article.author }}" />
     {% else %}
         <meta name="author" content="{{ AUTHOR }}" />

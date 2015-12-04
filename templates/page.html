@@ -2,7 +2,9 @@
 {% block title %}{{ page.title }} - {{ SITENAME }}{% endblock %}
 {% block html_lang %}{{ page.lang }}{% endblock %}
 {% block meta %}
-    {% if page.author %}
+    {% if page.authors %}
+        <meta name="author" content="{{ page.authors | join(', ') }}" />
+    {% elif page.author %}
         <meta name="author" content="{{ page.author }}" />
     {% else %}
         <meta name="author" content="{{ AUTHOR }}" />
