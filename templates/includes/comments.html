@@ -38,4 +38,9 @@
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
     </section>
+{% elif ISSO_URL %}
+    <hr/>
+    <script data-isso="{{ ISSO_URL }}"
+            src="{{ ISSO_URL }}/js/embed.min.js"></script>
+    <section id="isso-thread"></section>
 {% endif %}

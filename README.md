@@ -35,6 +35,7 @@ This theme honors the following standard Pelican settings:
 	* `GOOGLE_ANALYTICS` (classic tracking code)
 	* `GOOGLE_ANALYTICS_UNIVERSAL` and `GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY` (Universal tracking code)
 	* `DISQUS_SITENAME`
+	* `ÌSSO_URL`
 	* `PIWIK_URL`, `PIWIK_SSL_URL` and `PIWIK_SITE_ID`
 
 It uses the `tag_cloud` variable for displaying tags in the sidebar. You can control the amount of tags shown with: `TAG_CLOUD_MAX_ITEMS`
