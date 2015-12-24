@@ -2,6 +2,10 @@
     {% set DISPLAY_TAGS_ON_SIDEBAR = True %}
 {% endif %}
 
+{% if DISPLAY_LINKS_ON_SIDEBAR is not defined %}
+    {% set DISPLAY_LINKS_ON_SIDEBAR = True %}
+{% endif %}
+
 <section class="well well-sm">
     <ul class="list-group list-group-flush">
         {% if SOCIAL %}
@@ -99,7 +103,9 @@
 
         {% include 'includes/github.html' %}
         {% include 'includes/twitter_timeline.html' %}
-        {% include 'includes/links.html' %}
+        {% if DISPLAY_LINKS_ON_SIDEBAR %}
+            {% include 'includes/links.html' %}
+        {% endif %}
         {% include 'includes/sidebar-images.html' %}
     </ul>
 </section>
