@@ -1,3 +1,5 @@
+### CURRENT STATUS: Due to a busy work schedule, I've been unable to commit to this project for the past 6 months. The planning is to pick up work for this project near the end of Jan 2016. Thanks for your patience!
+
 # pelican-bootstrap3
 
 This is a Bootstrap 3 theme for Pelican. It's fully responsive. Pelican-bootstrap3 is compatible with Pelican 3.3.0 and 
