@@ -19,7 +19,12 @@ First:
 
 Then:
 
-Point the `THEME` variable in your `pelicanconf.py` to `/path/to/pelican-bootstrap3`
+Point the `THEME` variable in your `pelicanconf.py` to
+`/path/to/pelican-bootstrap3` and add 
+
+`JINJA_EXTENSIONS = ['jinja2.ext.i18n']`
+
+to your Pelican configuration, as this template can be translated (see below).
 
 ## Usage
 
@@ -297,6 +302,11 @@ The footer will display a copyright message using the AUTHOR variable and the ye
 Include a series of images in the sidebar.
 
 SIDEBAR_IMAGES = ["/path/to/image1.png", "/path/to/image2.png"]
+
+### Translations
+
+This template can be translated using pybabel and the enclosed Makefile. See
+[Localizing themes with Jinja2](https://github.com/getpelican/pelican-plugins/blob/master/i18n_subsites/localizing_using_jinja2.rst) for more details and pointers.
 
 ## Live example
 
