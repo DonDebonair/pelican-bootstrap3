@@ -1,16 +1,24 @@
 <style>
 	#banner{
+		background-position:center;
 	    background-image:url("{{ SITEURL}}/{{ BANNER }}");
 	}
 </style>
 
+
 <div id="banner">
 	<div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
+	{% if BANNER_TITLE or BANNER_SUBTITLE %}
 		<div class="copy">
-			<h1>{{ SITENAME }}</h1>
-			{% if BANNER_SUBTITLE %}
+			{% if BANNER_TITLE %}
+		        <h1>
+		            {{ BANNER_TITLE }}
+		        </h1>
+		    {% endif %}
+   			{% if BANNER_SUBTITLE %}
 				<p class="intro">{{ BANNER_SUBTITLE }}</p>
 			{% endif %}
+		{% endif %}
 		</div>
 	</div>
 </div>
