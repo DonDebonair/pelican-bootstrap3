@@ -1,0 +1,24 @@
+{% if COOKIECONSENT %}
+    <!-- Begin Cookie Consent -->
+    <script>
+        window.cookieconsent_options = {
+            {% if COOKIECONSENT_TEXT|default('This website uses cookies to ensure you get the best experience on our website.') %}
+            message: '{{ COOKIECONSENT_TEXT }}',
+            {% endif %}
+            {% if COOKIECONSENT_MORE_INFO|default('More info') %}
+            learnMore: '{{ COOKIECONSENT_MORE_INFO }}',
+            {% endif %}
+            {% if COOKIECONSENT_MORE_INFO_URL|default('vertical') %}
+            link: '{{ COOKIECONSENT_MORE_INFO_URL }}',
+            {% endif %}
+            {% if COOKIECONSENT_DISMISS %}
+            dismiss: '{{ COOKIECONSENT_DISMISS }}',
+            {% endif %}
+            {% if COOKIECONSENT_THEME|default('dark-top') %}
+            theme: '{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/cookieconsent2/{{ COOKIECONSENT_THEME }}.css',
+            {% endif %}
+        };
+    </script>
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/cookieconsent.min.js"></script>
+    <!-- End Cookie Consent -->
+{% endif %}
