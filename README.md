@@ -71,6 +71,17 @@ EXTRA_PATH_METADATA = {
 }
 ```
 
+### Material Design
+
+If you want to enable Material Design, add in pelicanconf.py.
+
+![material](screenshot-material.png)
+
+```
+MATERIAL_DESIGN = True
+```
+Adapted from @FezVrasta work https://github.com//bootstrap-material-design.
+
 ### Pygments
 
 You can choose the syntax highlighting style by using the `PYGMENTS_STYLE` variable to specify one of the built-in Pygments styles. By default the `native` style is used. The following styles are avaiable:
