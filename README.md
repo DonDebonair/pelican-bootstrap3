@@ -33,6 +33,7 @@ This theme honors the following standard Pelican settings:
 	* `DISPLAY_CATEGORIES_ON_MENU`
 	* `MENUITEMS`
 	* `LINKS` (Blogroll will be put in the sidebar instead of the head)
+	* `DISPLAY_LINKS_ON_SIDEBAR` (Default is True, Enables/Disables LINKS on Sidebar)
 * Analytics & Comments
 	* `GOOGLE_ANALYTICS` (classic tracking code)
 	* `GOOGLE_ANALYTICS_UNIVERSAL` and `GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY` (Universal tracking code)
