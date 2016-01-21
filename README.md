@@ -201,10 +201,10 @@ If you're using reStructuredText for writing articles and pages, you can include
 
 ### Disqus comments
 
-* This theme sets identifiers for each article's comment threads. If you are switching from a theme that doesn't (such as the Pelican built-in default) this will result in existing comments getting lost. To prevent this, set DISQUS_NO_ID to _True_.
-* Set DISQUS_ID_PREFIX_SLUG to _True_ if you have configured your article URLs such that the slug alone will likely not be unique. Ignored if DISQUS_NO_ID is _True_.
+* This theme sets identifiers for each article's comment threads. If you are switching from a theme that doesn't (such as the Pelican built-in default) this will result in existing comments getting lost. To prevent this, set `DISQUS_NO_ID` to _True_.
+* Set `DISQUS_ID_PREFIX_SLUG` to _True_ if you have configured your article URLs such that the slug alone will likely not be unique. Ignored if `DISQUS_NO_ID` is _True_.
 * You can also enable Disqus comments for pages. This is a per-page setting you can control by adding a field `comments` to you pages' metadata. Set it to _enabled_ to enable comments for that page. Comment-threads for pages will have an id that is prefixed by 'page-'.
-* To show Disqus comment counts on the index page, set DISQUS_DISPLAY_COUNTS to _True_.
+* To show Disqus comment counts on the index page, set `DISQUS_DISPLAY_COUNTS` to _True_.
 
 ### Content license
 
@@ -250,7 +250,7 @@ The same image options for Open Graph (see above) can be used for setting images
 
 The theme can show your twitter timeline in the sidebar. To enable, provide a `TWITTER_USERNAME` and a `TWITTER_WIDGET_ID`.
 
-To get a `TWITTER_WIDGET_ID`, go to: https://twitter.com/settings/widgets and select `Create new`. You'll find the TWITTER_WIDGET_ID under the html or in the site url:
+To get a `TWITTER_WIDGET_ID`, go to: https://twitter.com/settings/widgets and select `Create new`. You'll find the `TWITTER_WIDGET_ID` under the html or in the site url:
 
 `https://twitter.com/settings/widgets/TWITTER_WIDGET_ID/edit`
 
@@ -284,19 +284,19 @@ This theme has support for the
 All you have to do, is:
 - enable the plugin, and the theme will add a search box on the right
   side of the menu
-- Add `'search'` to the `DIRECT_TEMPLATES` in your `pelicanconf.py`. E.g. `DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search').
-By default, the Tipue search page is configured at "/search.html", but you can override that with the `SEARCH_URL` 
+- Add `'search'` to the `DIRECT_TEMPLATES` in your `pelicanconf.py`. E.g. `DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')`.
+By default, the Tipue search page is configured at `/search.html`, but you can override that with the `SEARCH_URL`
 setting, which comes in handy if you have fancy rewrite rules in your Apache or Nginx configuration.
 
 ### Footer
 
-The footer will display a copyright message using the AUTHOR variable and the year of the latest post. If a content license mark is enabled (see above), that will be shown as well.
+The footer will display a copyright message using the `AUTHOR` variable and the year of the latest post. If a content license mark is enabled (see above), that will be shown as well.
 
 ### Sidebar Images
 
 Include a series of images in the sidebar.
 
-SIDEBAR_IMAGES = ["/path/to/image1.png", "/path/to/image2.png"]
+`SIDEBAR_IMAGES = ["/path/to/image1.png", "/path/to/image2.png"]`
 
 ## Live example
 
