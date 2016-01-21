@@ -32,7 +32,10 @@ This theme honors the following standard Pelican settings:
 	* `DISPLAY_PAGES_ON_MENU`
 	* `DISPLAY_CATEGORIES_ON_MENU`
 	* `MENUITEMS`
-	* `LINKS` (Blogroll will be put in the sidebar instead of the head)
+  * `DROPDOWNITEMS` 
+    - You may customize the header of this dropdown items, by setting the 
+    `DROPDOWN_TEXT` variable
+  * `LINKS` (Blogroll will be put in the sidebar instead of the head)
 * Analytics & Comments
 	* `GOOGLE_ANALYTICS` (classic tracking code)
 	* `GOOGLE_ANALYTICS_UNIVERSAL` and `GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY` (Universal tracking code)
@@ -253,6 +256,8 @@ The theme can show your twitter timeline in the sidebar. To enable, provide a `T
 To get a `TWITTER_WIDGET_ID`, go to: https://twitter.com/settings/widgets and select `Create new`. You'll find the TWITTER_WIDGET_ID under the html or in the site url:
 
 `https://twitter.com/settings/widgets/TWITTER_WIDGET_ID/edit`
+
+To limit tweets count in the timeline, set `TWEET_LIMIT` to the count(integer).
 
 ### AddThis
 
