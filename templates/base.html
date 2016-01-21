@@ -99,6 +99,9 @@
               title="{{ SITENAME }} {{ category }} ATOM Feed"/>
     {% endif %}
 
+    {# This shall be put before ending the <head> section #}
+    {% include 'includes/ga.html' %}
+
 </head>
 <body>
 
@@ -198,7 +201,6 @@
 {% endif %}
 {% include 'includes/github-js.html' %}
 {% include 'includes/disqus_script.html' %}
-{% include 'includes/ga.html' %}
 {% include 'includes/piwik.html' %}
 
 {% block scripts %}{% endblock %}
