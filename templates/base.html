@@ -193,9 +193,14 @@
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
 <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/respond.min.js"></script>
 
-{% if BANNER %}
-    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bodypadding.js"></script>
+{% if BANNER and BANNER_ALL_PAGES %}
+    <!-- Fix body padding because of banner -->
+    {% include 'includes/bodypadding.html' %}
+{% elif BANNER and not BANNER_ALL_PAGES %}
+    <!-- Include block for fixing body padding because of banner -->
+    {% block bodypadding %}{% endblock %}
 {% endif %}
+
 {% include 'includes/github-js.html' %}
 {% include 'includes/disqus_script.html' %}
 {% include 'includes/ga.html' %}
