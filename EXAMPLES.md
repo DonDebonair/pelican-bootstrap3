@@ -17,7 +17,7 @@ If your website is listed here, but you don't want it to be, let me know and I'l
 
 [Christine Doig](http://chdoig.github.io/) by [chdoig](https://github.com/chdoig) - Barely recognizable anymore as pelican-boostrap3, but it is in fact [based on this theme](http://chdoig.github.io/create-pelican-blog.html). The Twitter widget has been contributed back to pelican-bootstrap3
 
-[Rebecca Weiss](http://www.rebeccaweiss.info/) by [rjweiss](https://github.com/rjweiss)
+[Rebecca Weiss](https://rjweiss.github.io/) by [rjweiss](https://github.com/rjweiss)
 
 [Theory And Practice](http://theoryandpractice.org/) by [cranmer](https://github.com/cranmer) - Nice customization of the frontpage, using widgets.
 
@@ -33,10 +33,6 @@ If your website is listed here, but you don't want it to be, let me know and I'l
 
 [Toni Mueller](http://www.tonimueller.org/) by [muellert](https://github.com/muellert)
 
-[Caffeinated Engineering](http://caffeinatedengineering.com/) by [mattyjones](https://github.com/mattyjones)
-
-[Duncan Murdock](http://www.duncanmurdock.name/) by [damurdock](https://github.com/damurdock)
-
 [Ryan Gregory James](http://csc.ucdavis.edu/~rgjames/) by [Autoplectic](https://github.com/Autoplectic)
 
 [JPoser/Blog](http://jposer.net/) by [JPoser](https://github.com/JPoser)
@@ -48,8 +44,6 @@ If your website is listed here, but you don't want it to be, let me know and I'l
 [Bryce Boe](http://bryceboe.com/) by [bboe](https://github.com/bboe)
 
 [Crashdump.io blog](http://blog.crashdump.io/)
-
-[Landscape.io blog](https://blog.landscape.io/)
 
 [Eldelshell](http://www.eldelshell.com/)
 
