@@ -109,4 +109,22 @@
     <!-- add shariff support -->
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/shariff.min.js"></script>
 {% endif %}
+<!-- pelican_dynamic scripts -->
+{% if 'pelican_dynamic' in PLUGINS and article  %}
+   {% if article.scripts %}
+       {% for script in article.scripts %}
+{{ script }}
+       {% endfor %}
+   {% endif %}
+ {% endif %}
+{% endblock %}
+
+{% block dynamic_style %}
+   {% if 'pelican_dynamic' in PLUGINS %}
+     {% if article.styles %}
+       {% for style in article.styles %}
+       {{ style }}
+       {% endfor %}
+     {% endif %}
+   {% endif %}
 {% endblock %}
