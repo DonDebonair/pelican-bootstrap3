@@ -2,7 +2,7 @@
 
 # pelican-bootstrap3
 
-This is a Bootstrap 3 theme for Pelican. It's fully responsive. Pelican-bootstrap3 is compatible with Pelican 3.3.0 and 
+This is a Bootstrap 3 theme for Pelican. It's fully responsive. Pelican-bootstrap3 is compatible with Pelican 3.3.0 and
 higher. I will try to regularly update this theme with new features and newer versions of Bootstrap & Bootswatch.
 
 ## CONTRIBUTING
@@ -285,8 +285,12 @@ All you have to do, is:
 - enable the plugin, and the theme will add a search box on the right
   side of the menu
 - Add `'search'` to the `DIRECT_TEMPLATES` in your `pelicanconf.py`. E.g. `DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search').
-By default, the Tipue search page is configured at "/search.html", but you can override that with the `SEARCH_URL` 
+By default, the Tipue search page is configured at "/search.html", but you can override that with the `SEARCH_URL`
 setting, which comes in handy if you have fancy rewrite rules in your Apache or Nginx configuration.
+
+### Zoom Image
+
+You can enlarge images on mouseover by setting `ZOOMIMG = True`.
 
 ### Footer
 
